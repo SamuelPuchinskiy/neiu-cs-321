@@ -1,0 +1,41 @@
+body {
+    marign:auto;
+}
+
+.title {
+    margin: 3%;
+    font-family: Comic Sans MS;
+    font-size:350%;
+    text-align: center;
+}
+
+footer {
+    font-size:80%;
+    padding: 1%;
+    margin: 1%;
+}
+
+
+.home-text {
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+
+.responsive {
+    margin:1%;
+    padding:1%;
+}
+
+
+#birthmonth {
+    font-family: Comic Sans MS;
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+

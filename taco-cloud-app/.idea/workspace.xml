@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="67b035a9-f92b-4f9b-ad97-3caad12998c8" name="Default Changelist" comment="Update README.md">
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/src/main/java/tacos/TacoCloudApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../taco-cloud/src/test/java/tacos/TacoCloudApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/BirthMonth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/HomeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MonthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/images/horoscope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/onlyMonthTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/java/tacos/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/web/DesignController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/java/tacos/web/DesignController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/web/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/java/tacos/web/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/TacoCloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/resources/static/images/TacoCloud.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/resources/templates/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../taco-cloud/src/main/resources/templates/home.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Kotlin File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Samuel P &lt;54776868+samuelpuchinskiy@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Users\mycat\.m2\wrapper\dists\apache-maven-3.6.3-bin\1iopthnavndlasol9gbrbg6bf2\apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1h3IAhg6LhBg6XOyg5DQmWVflvx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../taco-cloud" />
+    <property name="settings.editor.selected.configurable" value="Lombok plugin" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.TacoCloudApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TacoCloudApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taco-cloud-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tacos.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tacos" />
+      <option name="MAIN_CLASS_NAME" value="tacos.TacoCloudApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="static.images in taco-cloud-app" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taco-cloud-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="static.images.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="static.images" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TacoCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="taco-cloud-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tacos.TacoCloudApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.static.images in taco-cloud-app" />
+        <item itemvalue="JUnit.TacoCloudApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67b035a9-f92b-4f9b-ad97-3caad12998c8" name="Default Changelist" comment="" />
+      <created>1599233208943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599233208943</updated>
+      <workItem from="1599233211935" duration="7420000" />
+      <workItem from="1599250137717" duration="1212000" />
+      <workItem from="1599252581973" duration="826000" />
+      <workItem from="1599253634155" duration="2366000" />
+      <workItem from="1599271131185" duration="815000" />
+      <workItem from="1599271981006" duration="112000" />
+      <workItem from="1599272619634" duration="9973000" />
+      <workItem from="1599328470029" duration="5944000" />
+      <workItem from="1599488138946" duration="831000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update README.md">
+      <created>1599236815284</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599236815284</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update README.md">
+      <created>1599248276334</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599248276334</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="Update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update README.md" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="728" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599248539962">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="728" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599248539962" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1599248340625">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599248340625" />
+    <state x="739" y="265" key="FileChooserDialogImpl" timestamp="1599488667148">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="739" y="265" key="FileChooserDialogImpl/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488667148" />
+    <state width="1620" height="285" key="GridCell.Tab.0.bottom" timestamp="1599488979627">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979627" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041244" />
+    <state width="1620" height="285" key="GridCell.Tab.0.center" timestamp="1599488979626">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979626" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041244" />
+    <state width="1620" height="285" key="GridCell.Tab.0.left" timestamp="1599488979625">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979625" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041243" />
+    <state width="1620" height="285" key="GridCell.Tab.0.right" timestamp="1599488979626">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979626" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041244" />
+    <state width="1620" height="285" key="GridCell.Tab.1.bottom" timestamp="1599488979628">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979628" />
+    <state width="1877" height="285" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041235" />
+    <state width="1620" height="285" key="GridCell.Tab.1.center" timestamp="1599488979627">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.1.center/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979627" />
+    <state width="1877" height="285" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041235" />
+    <state width="1620" height="285" key="GridCell.Tab.1.left" timestamp="1599488979627">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.1.left/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979627" />
+    <state width="1877" height="285" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041234" />
+    <state width="1620" height="285" key="GridCell.Tab.1.right" timestamp="1599488979627">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1620" height="285" key="GridCell.Tab.1.right/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599488979627" />
+    <state width="1877" height="285" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1599250041235" />
+    <state x="574" y="345" key="Registry" timestamp="1599244442887">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="574" y="345" key="Registry/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599244442887" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1599400647006">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599400647006" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1599248662356">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599248662356" />
+    <state x="342" y="185" key="new project wizard" timestamp="1599252204541">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="342" y="185" key="new project wizard/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599252204541" />
+    <state x="342" y="185" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1599250035838" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1599244434722">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1599244434722" />
+  </component>
+</project>
