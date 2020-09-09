@@ -6,5 +6,4 @@ import lombok.Data;
 public class BirthMonth {
     private final String monthID;
     private final String name;
-
 }

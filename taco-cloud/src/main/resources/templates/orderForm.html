@@ -73,7 +73,7 @@
         <input type="text" th:field="*{ccExpiration}"/>
         <span class="validationError"
               th:if="${#fields.hasErrors('ccExpiration')}"
-              th:errors="*{ccNumber}">CC Exp Error</span>
+              th:errors="*{ccExpiration}">CC Exp Error</span>
         <br/>
 
         <label for="ccCVV">CVV: </label>
