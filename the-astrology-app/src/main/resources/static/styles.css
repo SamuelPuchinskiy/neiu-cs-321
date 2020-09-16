@@ -37,5 +37,31 @@ footer {
     padding:1%;
     background: #f9f9f9;
 }
+#birthyear {
+    font-family: Comic Sans MS;
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+#birthday {
+    font-family: Comic Sans MS;
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+#name {
+    font-family: Comic Sans MS;
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+.validationError {
+    color: #ff0000;
+}
 
 

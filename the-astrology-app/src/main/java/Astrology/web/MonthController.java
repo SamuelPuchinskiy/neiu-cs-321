@@ -1,22 +1,29 @@
 package Astrology.web;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-//import javax.validation.Valid;
 
 
+import Astrology.BirthYear;
+import Astrology.day;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-//import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.Slf4j;
 import Astrology.BirthMonth;
 
+import javax.validation.Valid;
 
-//@Slf4j
+
+@Slf4j
 @Controller
-@RequestMapping("/BirthMonth.html")
+@RequestMapping("/BirthMonth")
 public class MonthController {
 
     @GetMapping
@@ -24,7 +31,11 @@ public class MonthController {
 
        //BirthMonth bm = new BirthMonth("1", "January");
 
+        return "birthMonth";
+    }
 
+    @ModelAttribute
+    public void addAttributes(Model model) {
         List<BirthMonth> bm = Arrays.asList(
                 new BirthMonth("1", "January"),
                 new BirthMonth("2", "February"),
@@ -41,8 +52,54 @@ public class MonthController {
         );
 
         model.addAttribute("month", bm);
+    }
 
-        return "BirthMonth.html";
+
+    @ModelAttribute
+    public void addAttributesYear(Model model) {
+        List<BirthYear> by = new ArrayList<>();
+
+        int leap = 3;
+        boolean ly = false;
+        for(int i = 1900; i <= 2020; i++)
+        {
+            leap++;
+            ly = false;
+            if(leap == 4)
+            {
+                leap = 0;
+                ly = true;
+            }
+            String num = i + "";
+            BirthYear obj = new BirthYear(num, num, ly);
+            by.add(obj);
+        }
+
+        model.addAttribute("year", by);
+    }
+
+    @ModelAttribute
+    public void addAttributesDay(Model model) {
+        List<day> days = new ArrayList<>();
+
+        for(int i = 1; i <=31; i++)
+        {
+            String num = i + "";
+            day obj = new day(num, num);
+            days.add(obj);
+        }
+
+        model.addAttribute("days", days);
+    }
+    
+    @PostMapping
+    public String processDesign(@Valid @ModelAttribute("birthMonth") birthday birthdayUser, Errors errors){
+        if(errors.hasFieldErrors()){
+            return "birthMonth";
+        }
+
+        log.info("Processing..." + birthdayUser);
+        return "redirect:/submit/results";
     }
 
 
