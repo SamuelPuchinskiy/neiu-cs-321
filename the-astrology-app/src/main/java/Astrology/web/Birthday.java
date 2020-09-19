@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class birthday {
+public class Birthday {
 
     @NotNull(message = "You must choose a month")
     private String birthYearUser;

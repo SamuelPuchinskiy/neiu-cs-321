@@ -6,7 +6,7 @@ import java.util.List;
 
 
 import Astrology.BirthYear;
-import Astrology.day;
+import Astrology.Day;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -23,15 +23,15 @@ import javax.validation.Valid;
 
 @Slf4j
 @Controller
-@RequestMapping("/BirthMonth")
-public class MonthController {
+@RequestMapping("/AstrologyMain")
+public class MainController {
 
     @GetMapping
     public String showDesignForm(Model model) {
 
        //BirthMonth bm = new BirthMonth("1", "January");
 
-        return "birthMonth";
+        return "birth-day";
     }
 
     @ModelAttribute
@@ -80,12 +80,12 @@ public class MonthController {
 
     @ModelAttribute
     public void addAttributesDay(Model model) {
-        List<day> days = new ArrayList<>();
+        List<Day> days = new ArrayList<>();
 
         for(int i = 1; i <=31; i++)
         {
             String num = i + "";
-            day obj = new day(num, num);
+            Day obj = new Day(num, num);
             days.add(obj);
         }
 
@@ -93,13 +93,13 @@ public class MonthController {
     }
     
     @PostMapping
-    public String processDesign(@Valid @ModelAttribute("birthMonth") birthday birthdayUser, Errors errors){
+    public String processDesign(@Valid @ModelAttribute("birthMonth") Birthday birthdayUser, Errors errors){
         if(errors.hasFieldErrors()){
-            return "birthMonth";
+            return "birth-day";
         }
 
         log.info("Processing..." + birthdayUser);
-        return "redirect:/submit/results";
+        return "redirect:/Submit/Results";
     }
 
 
