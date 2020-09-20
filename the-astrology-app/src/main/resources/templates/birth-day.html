@@ -52,7 +52,7 @@
                                 <p id="birthmonth">
                                     <b>Please choose your birth month: </b>
                                     <select name="birthMonthUser">
-                                        <div th:each="m : ${month}" class="form-group">
+                                        <div th:each="m : ${months}" class="form-group">
                                            <option th:text="${m.name}">MONTH
                                                <span class="validationError"
                                                      th:if="${#fields.hasErrors('birthMonthUser')}"
@@ -69,7 +69,7 @@
                                     <b>Please choose your birth day: </b>
                                     <select name="birthDayUser">
                                         <div th:each="d : ${days}" class="form-group">
-                                            <option th:text="${d.name}">MONTH
+                                            <option th:text="${d.name}">Day Error
                                                 <span class="validationError"
                                                       th:if="${#fields.hasErrors('birthDayUser')}"
                                                       th:errors="*{birthDayUser}">Day Error

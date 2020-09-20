@@ -11,10 +11,9 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @RequiredArgsConstructor
-public class Day {
+public class Birth_Month {
 
     @Id
-    private final String dayID;
+    private final String monthID;
     private final String name;
-
 }
