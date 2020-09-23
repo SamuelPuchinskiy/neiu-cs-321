@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasebase View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet", th:href="@{/styles.css}"/>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="row h-100">
+        <div class="col-sm-12 auto">
+            <div class="card card-block w-75 mx-auto">
+
+                <h1 class="title">The Astrology App - Database Tables</h1>
+
+                <div class="row">
+
+                    <div class="col-4">
+                        <img th:src="@{/images/horoscope.png}" class="responsive" width="100%"  height="100%" alt="An image with all the horoscope symbols and their names and dates."/>
+                    </div> <!-- closes col1 -->
+
+                    <div class="col-8">
+                        <p class="home-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius, justo non egestas egestas, nibh velit dictum augue, nec tristique sem est ut tellus. Nullam et erat elit. Nunc faucibus tincidunt accumsan. Quisque nisi erat, pretium consectetur magna vel, interdum vehicula est. Aliquam a mattis nibh. Praesent fringilla vehicula neque sit amet condimentum. In ornare magna enim, et egestas orci fringilla ut. Nulla mi elit, vestibulum vitae enim vehicula, tincidunt sodales nulla. Duis scelerisque, leo vitae iaculis vehicula, justo lorem pretium nibh, ut dapibus ipsum lectus vel arcu. Fusce a dapibus arcu.</p>
+
+                        <div>
+                            <p id="birthmonth">
+                                <b>Table Database Page</b>
+                            </p>
+                        </div>
+                        <div>
+                            <p id="birthyear">
+                                <b>All four tables are listed below.</b>
+                                <!-- <p th:text="${birthMonthUser.name}">placeholder</p> -->
+                            </p>
+                        </div>
+                        <div>
+                            <p id="birthday">
+                                <a th:href="@{/AstrologyMain}"><b>Back</b></a>
+                            </p>
+                        </div>
+                    </div> <!-- closes col2 -->
+                </div> <!-- closes row -->
+
+
+                <!--TABLE DATA-->
+                <div id="table">
+                    <div class="tables">
+                        <h3 class="tabHead">Month Table</h3>
+                        <div th:each="bm : ${months}">
+                            <p>Month ID: <span th:text="${bm.monthID}">Month ID</span> ~ Month Name: <span th:text="${bm.name}">Month Name</span> </p>
+                        </div>
+                    </div>
+
+                    <div class="tables">
+                        <h3 class="tabHead">Day Table</h3>
+                        <div th:each="d : ${days}">
+                            <p>Day ID: <span th:text="${d.dayID}">Day ID</span> ~ Day Name: <span th:text="${d.name}">Day Name</span> </p>
+                        </div>
+                    </div>
+
+                    <div class="tables">
+                        <h3 class="tabHead">Year Table</h3>
+                        <div th:each="yr : ${year}">
+                            <p>Year ID: <span th:text="${yr.yearID}">Year ID</span> ~ Year Name: <span th:text="${yr.name}">Year Name</span> </p>
+                        </div>
+                    </div>
+
+                    <!--
+                        USER DATA TABLE DOES NOT DROP, USER DATA UPDATES AUTOMATICALLY TO PAGE
+                        All months are 31 days and does not account for Leap year yet
+                    -->
+                    <div class="tables">
+                        <h3 class="tabHead">User Data Table</h3>
+                        <div th:each="user : ${bday}">
+                            <p>
+                                User Birthday ID: <span th:text="${user.id}">User ID</span>
+                                ~ User Birth Year: <span th:text="${user.birthYearUser}">Year</span>
+                                ~ User Birth Month: <span th:text="${user.birthMonthUser}">Month</span>
+                                ~ User Birth Day: <span th:text="${user.birthDayUser}">Day</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <p><br/> &copy; Copyright @2020 Samuel Puchinskiy CS-321-1 Server Side Web Development</p>
+                </footer>
+
+            </div> <!-- to center page -->
+        </div> <!-- to center page -->
+    </div> <!-- to center page -->
+
+</body>
+</html>

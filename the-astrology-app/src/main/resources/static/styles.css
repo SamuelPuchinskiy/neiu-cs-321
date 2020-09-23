@@ -64,4 +64,22 @@ footer {
     color: #ff0000;
 }
 
+#table {
+    font-family: Courier New;
+    margin:1%;
+    padding:1%;
+}
+
+.tables {
+    font-size:120%;
+    margin:2%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+.tabHead {
+    font-family: Lucida Console;
+    font-size: 150%;
+}
+
 
