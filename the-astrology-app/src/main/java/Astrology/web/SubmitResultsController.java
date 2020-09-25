@@ -13,7 +13,7 @@ public class SubmitResultsController {
     @GetMapping("/Results")
     public String resultsPage() {
         //model.addAttribute("birthday", new birthday());
-        return "submit-results";
+        return "submitresults";
     }
 
 

@@ -48,7 +48,7 @@ public class MainController {
 
     @GetMapping
     public String showDesignForm(Model model) {
-        return "birth-day";
+        return "birthday";
     }
 
 
@@ -74,7 +74,7 @@ public class MainController {
     @PostMapping
     public String processDesign(@Valid @ModelAttribute("birthdayUser") Birthday birthdayUser, Errors errors){
         if(errors.hasFieldErrors()){
-            return "birth-day";
+            return "birthday";
         }
 
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);

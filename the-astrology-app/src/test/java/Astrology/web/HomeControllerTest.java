@@ -1,4 +1,4 @@
-package Astrology;
+package Astrology.web;
 
 
 import org.junit.Test;

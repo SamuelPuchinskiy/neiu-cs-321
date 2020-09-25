@@ -36,7 +36,7 @@ public class DisplayAll {
 
     @GetMapping("/Tables")
     public String displaytabs() {
-        return "database-view";
+        return "databaseview";
     }
 
     @ModelAttribute(name = "Birth_Month")
