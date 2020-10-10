@@ -17,17 +17,19 @@ public class Birthday implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    //@ManyToOne(targetEntity = Birth_Year.class)
+    //@ManyToOne(targetEntity = BirthYear.class)
     @NotNull(message = "You must choose a month")
     private String birthYearUser;
 
-    //@ManyToOne(targetEntity = Birth_Month.class)
+    //@ManyToOne(targetEntity = BirthMonth.class)
     @NotNull(message = "You must choose a month")
     private String birthMonthUser;
 
     //@ManyToOne(targetEntity = Day.class)
     @NotNull(message = "You must choose a Day")
     private String birthDayUser;
+
+}
 
 /*
     public void addDesign(Birthday design) {
@@ -40,11 +42,11 @@ public class Birthday implements Serializable {
 
         addDesign(design);
     }
-    */
 
 
-   /* @NotBlank(message = "Name is required")
+
+   @NotBlank(message = "Name is required")
     private String name;
 */
 
-}
+

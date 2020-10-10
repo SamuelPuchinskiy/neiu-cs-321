@@ -30,7 +30,6 @@ public class HomeControllerTest {
     }
 
 
-
     @Autowired
     private MockMvc mockMvc;
 /*
@@ -47,7 +46,6 @@ public class HomeControllerTest {
 
  */
 
-
-    }
+}
 
 

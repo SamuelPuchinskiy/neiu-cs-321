@@ -15,7 +15,6 @@ footer {
     margin: 1%;
 }
 
-
 .home-text {
     font-size:150%;
     margin:1%;
@@ -23,12 +22,10 @@ footer {
     background: #f9f9f9;
 }
 
-
 .responsive {
     margin:1%;
     padding:1%;
 }
-
 
 #birthmonth {
     font-family: Comic Sans MS;
@@ -37,6 +34,7 @@ footer {
     padding:1%;
     background: #f9f9f9;
 }
+
 #birthyear {
     font-family: Comic Sans MS;
     font-size:150%;
@@ -44,6 +42,7 @@ footer {
     padding:1%;
     background: #f9f9f9;
 }
+
 #birthday {
     font-family: Comic Sans MS;
     font-size:150%;
@@ -81,5 +80,3 @@ footer {
     font-family: Lucida Console;
     font-size: 150%;
 }
-
-

@@ -1,7 +1,7 @@
 package Astrology.web;
 
-import Astrology.Birth_Month;
-import Astrology.Birth_Year;
+import Astrology.BirthMonth;
+import Astrology.BirthYear;
 import Astrology.Birthday;
 import Astrology.Day;
 import Astrology.data.BirthdayRepository;
@@ -14,7 +14,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import java.util.List;
 
 @Controller
@@ -41,14 +40,13 @@ public class DisplayAll {
 
     @ModelAttribute(name = "Birth_Month")
     public void addMonthToModel(Model model) {
-        List<Birth_Month> months = (List<Birth_Month>) monthRepo.findAll();
+        List<BirthMonth> months = (List<BirthMonth>) monthRepo.findAll();
         model.addAttribute("months", months);
     }
 
-
     @ModelAttribute(name = "Birth_Year")
     public void addYearToModel(Model model) {
-        List<Birth_Year> years = (List<Birth_Year>) yearRepo.findAll();
+        List<BirthYear> years = (List<BirthYear>) yearRepo.findAll();
         model.addAttribute("year", years);
     }
 

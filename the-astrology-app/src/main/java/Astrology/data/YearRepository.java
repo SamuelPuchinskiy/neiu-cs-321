@@ -1,7 +1,7 @@
 package Astrology.data;
 
-import Astrology.Birth_Year;
+import Astrology.BirthYear;
 import org.springframework.data.repository.CrudRepository;
 
-public interface YearRepository extends CrudRepository<Birth_Year, String> {
+public interface YearRepository extends CrudRepository<BirthYear, String> {
 }

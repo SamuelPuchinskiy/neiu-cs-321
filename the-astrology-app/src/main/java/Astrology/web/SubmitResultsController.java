@@ -12,14 +12,14 @@ public class SubmitResultsController {
 
     @GetMapping("/Results")
     public String resultsPage() {
+
         //model.addAttribute("birthday", new birthday());
         return "submitresults";
     }
 
-
     @PostMapping
-    public String displayTable()
-    {
+    public String displayTable() {
+
         return "redirect:/DisplayAll/Tables";
     }
 
@@ -29,5 +29,4 @@ public class SubmitResultsController {
         return "birthMonth";
 
     }*/
-
 }
