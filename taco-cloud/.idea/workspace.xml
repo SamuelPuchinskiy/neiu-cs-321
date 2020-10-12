@@ -25,6 +25,9 @@
     <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,17 +82,6 @@
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TacoCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="taco-cloud" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tacos.TacoCloudApplication" />
@@ -125,6 +117,8 @@
       <workItem from="1602213778372" duration="596000" />
       <workItem from="1602344175316" duration="661000" />
       <workItem from="1602522015438" duration="11071000" />
+      <workItem from="1602534642825" duration="712000" />
+      <workItem from="1602535460499" duration="303000" />
     </task>
     <servers />
   </component>
