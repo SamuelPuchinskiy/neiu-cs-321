@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      lang="es">
+      lang="en">
 <head>
+    <meta charset="URF-8"/>
     <title>Taco Cloud</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
 </head>
 
 <body>
     <h1>Welcome to...</h1>
     <img th:src="@{/images/TacoCloud.png}"/>
+
+    <p class="nav"><a th:href="@{/login}">Login</a> | <a th:href="@{/register}">Register</a></p>
 </body>
 </html>

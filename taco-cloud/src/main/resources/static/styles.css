@@ -1,3 +1,16 @@
+body {
+    max-width: max-content;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav {
+    text-align: center;
+}
+
 div.ingredient-group:nth-child(odd) {
     float: left;
     padding-right: 20px;
