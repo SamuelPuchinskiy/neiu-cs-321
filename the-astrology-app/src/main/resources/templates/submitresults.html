@@ -28,21 +28,23 @@
                     </div> <!-- closes col1 -->
 
                     <div class="col-8">
-                        <p class="home-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius, justo non egestas egestas, nibh velit dictum augue, nec tristique sem est ut tellus. Nullam et erat elit. Nunc faucibus tincidunt accumsan. Quisque nisi erat, pretium consectetur magna vel, interdum vehicula est. Aliquam a mattis nibh. Praesent fringilla vehicula neque sit amet condimentum. In ornare magna enim, et egestas orci fringilla ut. Nulla mi elit, vestibulum vitae enim vehicula, tincidunt sodales nulla. Duis scelerisque, leo vitae iaculis vehicula, justo lorem pretium nibh, ut dapibus ipsum lectus vel arcu. Fusce a dapibus arcu.
-                            <a th:href="@{/DisplayAll/Tables}"><b>Database - Table Data (Click Here)</b></a>
-                        </p>
-
-                        <div>
-                            <p id="birthmonth">
-                                <b>Thank you for your submission.</b>
-                            </p>
+                        <div class="home-text">
+                            <p><a th:href="@{/DisplayAll/Tables}"><b>Database - Table Data (Click Here)</b></a></p>
                         </div>
-                        <div>
-                            <p id="birthyear">
-                                <b>Here would be the results.</b>
-                               <!-- <p th:text="${birthMonthUser.name}">placeholder</p> -->
-                            </p>
+
+                        <div class="home-text">
+                            <p><a th:href="@{/AstrologyMain/loginpage}"><b>Your Account</b></a></p>
+                        </div>
+
+                        <div class="home-text">
+                            <p><a th:href="@{/login}"><b>Log Out</b></a></p>
+                        </div>
+
+                        <div class="normal">
+                            <p>Thank you for your submission.</p>
+                        </div>
+                        <div class="normal">
+                            <p>Here would be the results.</p>
                         </div>
                         <div>
                             <p id="birthday">
@@ -55,7 +57,7 @@
                 </div> <!-- closes row -->
 
                 <footer>
-                    <p><br/> &copy; Copyright @2020 Samuel Puchinskiy CS-321-1 Server Side Web Development</p>
+                    <p><br/> &copy; Copyright @2020 Samuel Puchinskiy CS-321-1 Server Side Web Development <a th:href="@{/}"><b>Home</b></a></p>
                 </footer>
 
             </div> <!-- to center page -->

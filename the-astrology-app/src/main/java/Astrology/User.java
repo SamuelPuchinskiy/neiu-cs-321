@@ -8,10 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -27,12 +25,15 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    //DOES NOT ALWAYS SHOW ERRORS
+    @Column(unique = true)
     private final String username;
+
     private final String password;
-    private final String name;
     private final String email;
+    private final String fullname;
     private final String cell;
-    private final String birthday;
+    private final String userBirthday;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

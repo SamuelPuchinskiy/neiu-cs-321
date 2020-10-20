@@ -9,6 +9,22 @@ body {
     text-align: center;
 }
 
+.normal {
+    font-family: Comic Sans MS;
+    font-size:200%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
+.formInput {
+    font-family: Comic Sans MS;
+    font-size:150%;
+    margin:1%;
+    padding:1%;
+    background: #f9f9f9;
+}
+
 footer {
     font-size:80%;
     padding: 1%;

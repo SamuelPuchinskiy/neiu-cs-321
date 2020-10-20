@@ -1,15 +1,12 @@
 package Astrology.web;
 
+import java.util.Iterator;
 import java.util.List;
-import Astrology.BirthMonth;
-import Astrology.BirthYear;
-import Astrology.Birthday;
-import Astrology.Day;
-import Astrology.data.BirthdayRepository;
-import Astrology.data.DayRepository;
-import Astrology.data.MonthRepository;
-import Astrology.data.YearRepository;
+
+import Astrology.*;
+import Astrology.data.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -28,12 +25,15 @@ public class MainController {
     private final MonthRepository monthRepo;
     private final YearRepository yearRepo;
 
+    private UserRepository userRepo;
+
     @Autowired
-    public MainController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo) {
+    public MainController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo, UserRepository userRepo) {
         this.birthdayRepo = birthdayRepo;
         this.dayRepo = dayRepo;
         this.monthRepo = monthRepo;
         this.yearRepo = yearRepo;
+        this.userRepo = userRepo;
     }
 
     @ModelAttribute(name = "Birthday")
@@ -45,6 +45,51 @@ public class MainController {
     public String showDesignForm(Model model) {
         return "birthday";
     }
+
+    @GetMapping("/loginpage")
+    public String displayUserLogin(Model model, @AuthenticationPrincipal User user) {
+        addUserInforToModel(model, user);
+        addBirthdayDataToUserPage(model, user);
+        return "loginpage";
+    }
+
+    private void addUserInforToModel(Model model, @AuthenticationPrincipal User user) {
+        model.addAttribute("fullname", user.getFullname());
+        model.addAttribute("userBirthday", user.getUserBirthday());
+        model.addAttribute("id", user.getId());
+
+        //List<Birthday> bdayUser = (List<Birthday>) birthdayRepo.findAllByUser(user);
+        //model.addAttribute("bdayUser", bdayUser);
+    }
+
+    @ModelAttribute
+    public void addBirthdayDataToUserPage(Model model, @AuthenticationPrincipal User user) {
+        //List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAll();
+        List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAllByUser(user);
+
+        model.addAttribute("bdayUsers", bdayUsers);//birthdayRepo.findAllByUser(user));
+    }
+        /*
+    }
+        //String userId = user.getId() + "";
+        List<Birthday> bdayUser = (List<Birthday>) birthdayRepo.findByUser(user);
+        //List<User> users = (List<User>) userRepo.findAll();
+/*
+        List<Birthday> bdayUser = null; //= new List<Birthday>();
+        bdayUser
+
+        //Iterator<Transaction> txnIterator = transactions.iterator();
+
+        for(Birthday d : bday) {
+            User v = d.getUser();
+                if (v.getId() == user.getId())
+                    bdayUser.add(d);
+        }
+
+
+        model.addAttribute("bdayUser", bdayUser);
+    }
+    */
 
     @ModelAttribute(name = "Birth_Month")
     public void addMonthToModel(Model model) {
@@ -65,11 +110,12 @@ public class MainController {
     }
 
     @PostMapping
-    public String processDesign(@Valid @ModelAttribute("birthdayUser") Birthday birthdayUser, Errors errors) {
+    public String processDesign(@Valid @ModelAttribute("birthdayUser") Birthday birthdayUser, Errors errors, @AuthenticationPrincipal User user) {
         if (errors.hasFieldErrors()) {
             return "birthday";
         }
 
+        birthdayUser.setUser(user);
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
         log.info("Processing..." + birthdayUser);

@@ -29,6 +29,9 @@ public class Birthday implements Serializable {
     @NotNull(message = "You must choose a Day")
     private String birthDayUser;
 
+    @ManyToOne
+    private User user;
+
 }
 
 /*

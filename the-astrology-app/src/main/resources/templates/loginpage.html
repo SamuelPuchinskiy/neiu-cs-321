@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Datasebase View</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet", th:href="@{/styles.css}"/>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="row h-100">
+    <div class="col-sm-12 auto">
+        <div class="card card-block w-75 mx-auto">
+
+            <h1 class="title">The Astrology App - User Portal</h1>
+
+            <div class="row">
+
+                <div class="col-4">
+                    <img th:src="@{/images/horoscope.png}" class="responsive" width="100%"  height="100%" alt="An image with all the horoscope symbols and their names and dates."/>
+                </div> <!-- closes col1 -->
+
+                <div class="col-8" th:object="${session.user}">
+              <!--       <p class="home-text">Welcome <span th:text="*{fullname}">NAME</span>, to your user account page.</p> -->
+
+                    <div class="normal">
+                        <p>Welcome <b><span th:text="${fullname}">User Name</span></b> to your user portal</p>
+                        <p>Your ID: <b><span th:text="${id}">User ID</span></b> </p>
+                    </div>
+
+                    <div class="normal">
+                        <p>Your birthday is: <b><span th:text="${userBirthday}">User Birthday</span></b></p>
+                    </div>
+
+                    <div class="normal">
+                        <p>Below is your history activity</p>
+                    </div>
+                    <div>
+                        <p class="normal">
+                            <a th:href="@{/AstrologyMain}"><b>Calculate your Astrology here!</b></a>
+                        </p>
+                    </div>
+
+                    <div class="home-text">
+                        <p><a th:href="@{/login}"><b>Log Out</b></a></p>
+                    </div>
+                </div> <!-- closes col2 -->
+            </div> <!-- closes row -->
+
+
+
+                <!--
+                    USER DATA TABLE DOES NOT DROP, USER DATA UPDATES AUTOMATICALLY TO PAGE
+                    All months are 31 days and does not account for Leap year yet
+                -->
+                <div class="tables">
+                    <h3 class="tabHead">Your Activity:</h3>
+                    <div th:each="user : ${bdayUsers}">
+                        <p>
+                            User Birthday ID: <span th:text="${user.id}">User ID</span>
+                            ~ User Birth Year: <span th:text="${user.birthYearUser}">Year</span>
+                            ~ User Birth Month: <span th:text="${user.birthMonthUser}">Month</span>
+                            ~ User Birth Day: <span th:text="${user.birthDayUser}">Day</span>
+                        </p>
+                    </div>
+                </div>
+       <!--
+            <div class="tables">
+                <h3 class="tabHead">Your Activity:</h3>
+                <div th:each="user : ${bdayUser}">
+                    <p>
+                        User ID: <span th:text="${user.id}">User ID</span>
+                        ~ User Username: <span th:text="${user.username}">Year</span>
+                        ~ User cell: <span th:text="${user.cell}">Month</span>
+                        ~ User email: <span th:text="${user.email}">Day</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        -->
+
+            <footer>
+                <p><br/> &copy; Copyright @2020 Samuel Puchinskiy CS-321-1 Server Side Web Development <a th:href="@{/}"><b>Home</b></a></p>
+            </footer>
+
+        </div> <!-- to center page -->
+    </div> <!-- to center page -->
+</div> <!-- to center page -->
+
+</body>
+</html>
