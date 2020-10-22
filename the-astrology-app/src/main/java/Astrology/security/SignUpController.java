@@ -48,7 +48,7 @@ public class SignUpController {
         try {
             userRepo.save(signUpForm.toUser(passwordEncoder));
         } catch (DataIntegrityViolationException e) {
-            errors.rejectValue("username", "invalidUsername", "Username not available. please choose another username");
+            errors.rejectValue("username", "invalidUsername", "Username not available. please choose another username. (Case Sensitive)");
             return "/signup";
         }
         return "redirect:/login";

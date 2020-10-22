@@ -15,27 +15,27 @@ public class SignUpForm {
     // DOES NOT ALWAYS SHOW ERRORS
 
     @NotNull
-    @Size(min = 5, max = 50, message = "Username must have at least 5 to 50 characters")
+    @Size(min = 5, max = 50, message = "Username must have at least 5 to 50 characters (Case Sensitive)")
     private String username;
 
     @NotNull
-    @Size(min = 8, max = 25, message = "Password must have at least 8 to 25 characters")
+    @Size(min = 8, max = 25, message = "Password must have at least 8 to 25 characters (Case Sensitive)")
     private String password;
 
     @NotNull
-    @Size(min = 5, max = 50, message = "Email must have at least 5 to 50 characters")
+    @Size(min = 5, max = 50, message = "Email must have at least 5 to 50 characters (Case Sensitive)")
     private String email;
 
     @NotNull
-    @NotEmpty(message = "Name is required")
+    @NotEmpty(message = "Name is required (Case Sensitive)")
     private String fullname;
 
     @NotNull
-    @Pattern(regexp = "[0-9]{3}-[0-9]{3}-[0-9]{4}", message = "Phone number format: XXX-XXX-XXXX")
+    @Pattern(regexp = "[0-9]{3}-[0-9]{3}-[0-9]{4}", message = "Phone number format: XXX-XXX-XXXX (Case Sensitive)")
     private String cell;
 
     @NotNull
-    @Pattern(regexp = "[0-9]{2}/[0-9]{2}/[0-9]{4}", message = "Birthday format: MM/DD/YYYY")
+    @Pattern(regexp = "[0-9]{2}/[0-9]{2}/[0-9]{4}", message = "Birthday format: MM/DD/YYYY (Case Sensitive)")
     private String userBirthday;
 
     public User toUser(PasswordEncoder passwordEncoder) {
