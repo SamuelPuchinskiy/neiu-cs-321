@@ -28,7 +28,6 @@
                 </div> <!-- closes col1 -->
 
                 <div class="col-8" th:object="${session.user}">
-              <!--       <p class="home-text">Welcome <span th:text="*{fullname}">NAME</span>, to your user account page.</p> -->
 
                     <div class="normal">
                         <p>Welcome <b><span th:text="${fullname}">User Name</span></b> to your user portal</p>
@@ -54,12 +53,7 @@
                 </div> <!-- closes col2 -->
             </div> <!-- closes row -->
 
-
-
-                <!--
-                    USER DATA TABLE DOES NOT DROP, USER DATA UPDATES AUTOMATICALLY TO PAGE
-                    All months are 31 days and does not account for Leap year yet
-                -->
+                <!-- Display only User Data, not all User Database -->
                 <div class="tables">
                     <h3 class="tabHead">Your Activity:</h3>
                     <div th:each="user : ${bdayUsers}">
@@ -71,20 +65,7 @@
                         </p>
                     </div>
                 </div>
-       <!--
-            <div class="tables">
-                <h3 class="tabHead">Your Activity:</h3>
-                <div th:each="user : ${bdayUser}">
-                    <p>
-                        User ID: <span th:text="${user.id}">User ID</span>
-                        ~ User Username: <span th:text="${user.username}">Year</span>
-                        ~ User cell: <span th:text="${user.cell}">Month</span>
-                        ~ User email: <span th:text="${user.email}">Day</span>
-                    </p>
-                </div>
-            </div>
-        </div>
-        -->
+            <!-- User Data -->
 
             <footer>
                 <p><br/> &copy; Copyright @2020 Samuel Puchinskiy CS-321-1 Server Side Web Development <a th:href="@{/}"><b>Home</b></a></p>

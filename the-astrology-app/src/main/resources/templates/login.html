@@ -30,10 +30,11 @@
                 <div class="col-8">
 
                     <!-- Error Checking -->
-                    <div th:if="${error}">Unable to login. Check your username and password.</div>
+                    <div class="validationError" th:if="${param.error}">Unable to login. Check your username and password.</div>
 
                     <h2 class="normal">You're about to enter to your very own Astrological chart!</h2>
 
+                    <!-- Login Form -->
                     <form method="post" th:action="@{/login}">
                         <div class="formInput">
                             <label for="username">Username: </label>
@@ -50,6 +51,7 @@
                         </div>
 
                     </form>
+                    <!-- Login Form -->
 
 
                     <p class="home-text">First time here? Click to <a th:href="@{/register}">Sign Up</a> to reveal your astrological chart! </p>

@@ -32,6 +32,7 @@
                     <p class="home-text">Already have an account? Click <a th:href="@{/login}">Login</a></p>
                     <p class="home-text">To continue, please sign up:</p>
 
+                    <!-- Start of Registration Form -->
                     <form method="post" th:action="@{/register}" th:object="${signUpForm}">
 
                         <div class="formInput">
@@ -49,7 +50,7 @@
                         <div class="formInput">
                             <label for="email">Email: </label>
                             <input type="text" placeholder="5 or more characters"  th:name="email" th:value="*{email}" id="email"/>
-                            <span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{username}">Email Error</span>
+                            <span class="validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
                         </div>
 
                         <div class="formInput">
@@ -74,14 +75,10 @@
                             <button class="btn btn-secondary btn-lg btn-block">Submit</button>
                         </div>
                         <!-- DOES NOT ALWAYS SHOW ERRORS -->
-
                     </form>
-
-
-
+                    <!-- Registration Form -->
 
                 </div> <!-- closes col2 -->
-
             </div> <!-- closes row -->
 
             <footer>

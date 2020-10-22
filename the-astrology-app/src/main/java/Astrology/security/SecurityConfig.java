@@ -45,7 +45,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .formLogin().loginPage("/login").defaultSuccessUrl("/AstrologyMain/loginpage")
                 .and()
-                    .logout().logoutSuccessUrl("/");
+                    .logout().logoutSuccessUrl("/login");
 
         http.csrf().disable();
         http.headers().frameOptions().disable();

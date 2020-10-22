@@ -69,7 +69,8 @@ public class MainController {
 
         model.addAttribute("bdayUsers", bdayUsers);//birthdayRepo.findAllByUser(user));
     }
-        /*
+
+    /*
     }
         //String userId = user.getId() + "";
         List<Birthday> bdayUser = (List<Birthday>) birthdayRepo.findByUser(user);

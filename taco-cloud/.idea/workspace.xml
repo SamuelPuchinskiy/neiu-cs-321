@@ -23,35 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_3_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tacos/web/OrderProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/taco-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/taco-cloud.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/Birthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/Birthday.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/HomeController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/test/java/Astrology/web/HomeControllerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,17 +87,6 @@
     <property name="settings.editor.selected.configurable" value="Lombok plugin" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TacoCloudApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="taco-cloud" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tacos.TacoCloudApplication" />
@@ -165,6 +135,7 @@
       <workItem from="1603225222918" duration="1000" />
       <workItem from="1603226214450" duration="1260000" />
       <workItem from="1603228149000" duration="3237000" />
+      <workItem from="1603383747001" duration="1401000" />
     </task>
     <servers />
   </component>
