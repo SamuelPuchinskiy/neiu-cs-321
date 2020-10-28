@@ -26,9 +26,6 @@ spring:
     password:
     driver: org.h2.Driver
 
-server:
-    port: 9090
-
 taco:
   orders:
     pageSize: 10

@@ -23,16 +23,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_springsecurity5_3_0_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_4_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_popper_js_1_16_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/BirthdayProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/taco-cloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/taco-cloud.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tacos/web/DesignTacoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tacos/web/DesignTacoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/order_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tacos/web/DesignTacoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tacos/web/DesignTacoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/order_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/order_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SignUpForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/data.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +164,11 @@
       <workItem from="1603383747001" duration="1401000" />
       <workItem from="1603386161402" duration="61000" />
       <workItem from="1603386555778" duration="322000" />
+      <workItem from="1603412212021" duration="1196000" />
+      <workItem from="1603662587023" duration="2523000" />
+      <workItem from="1603810166965" duration="13806000" />
+      <workItem from="1603896918064" duration="68000" />
+      <workItem from="1603897051751" duration="316000" />
     </task>
     <servers />
   </component>
@@ -184,65 +215,73 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1600184396025" />
-    <state width="1877" height="409" key="GridCell.Tab.0.bottom" timestamp="1603234352513">
+    <state width="1877" height="46" key="GridCell.Tab.0.bottom" timestamp="1603825472163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472163" />
     <state width="1637" height="76" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115888" />
     <state width="1877" height="409" key="GridCell.Tab.0.bottom/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352513" />
     <state width="1877" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
     <state width="1637" height="390" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915881" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778428" />
-    <state width="1877" height="409" key="GridCell.Tab.0.center" timestamp="1603234352512">
+    <state width="1877" height="46" key="GridCell.Tab.0.center" timestamp="1603825472162">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.0.center/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472162" />
     <state width="1637" height="76" key="GridCell.Tab.0.center/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115887" />
     <state width="1877" height="409" key="GridCell.Tab.0.center/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352512" />
     <state width="1877" height="235" key="GridCell.Tab.0.center/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
     <state width="1637" height="390" key="GridCell.Tab.0.center/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915881" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778427" />
-    <state width="1877" height="409" key="GridCell.Tab.0.left" timestamp="1603234352511">
+    <state width="1877" height="46" key="GridCell.Tab.0.left" timestamp="1603825472161">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.0.left/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472161" />
     <state width="1637" height="76" key="GridCell.Tab.0.left/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115886" />
     <state width="1877" height="409" key="GridCell.Tab.0.left/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352511" />
     <state width="1877" height="235" key="GridCell.Tab.0.left/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073872" />
     <state width="1637" height="390" key="GridCell.Tab.0.left/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915880" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778427" />
-    <state width="1877" height="409" key="GridCell.Tab.0.right" timestamp="1603234352513">
+    <state width="1877" height="46" key="GridCell.Tab.0.right" timestamp="1603825472162">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.0.right/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472162" />
     <state width="1637" height="76" key="GridCell.Tab.0.right/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115887" />
     <state width="1877" height="409" key="GridCell.Tab.0.right/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352513" />
     <state width="1877" height="235" key="GridCell.Tab.0.right/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
     <state width="1637" height="390" key="GridCell.Tab.0.right/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915881" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778428" />
-    <state width="1877" height="409" key="GridCell.Tab.1.bottom" timestamp="1603234352514">
+    <state width="1877" height="46" key="GridCell.Tab.1.bottom" timestamp="1603825472163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472163" />
     <state width="1637" height="76" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115890" />
     <state width="1877" height="409" key="GridCell.Tab.1.bottom/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352514" />
     <state width="1877" height="235" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073874" />
     <state width="1637" height="390" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915882" />
     <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778428" />
-    <state width="1877" height="409" key="GridCell.Tab.1.center" timestamp="1603234352513">
+    <state width="1877" height="46" key="GridCell.Tab.1.center" timestamp="1603825472163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.1.center/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472163" />
     <state width="1637" height="76" key="GridCell.Tab.1.center/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115890" />
     <state width="1877" height="409" key="GridCell.Tab.1.center/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352513" />
     <state width="1877" height="235" key="GridCell.Tab.1.center/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
     <state width="1637" height="390" key="GridCell.Tab.1.center/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915882" />
     <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778428" />
-    <state width="1877" height="409" key="GridCell.Tab.1.left" timestamp="1603234352513">
+    <state width="1877" height="46" key="GridCell.Tab.1.left" timestamp="1603825472163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.1.left/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472163" />
     <state width="1637" height="76" key="GridCell.Tab.1.left/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115889" />
     <state width="1877" height="409" key="GridCell.Tab.1.left/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352513" />
     <state width="1877" height="235" key="GridCell.Tab.1.left/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
     <state width="1637" height="390" key="GridCell.Tab.1.left/0.0.1920.1050/1920.27.1680.1020@1920.27.1680.1020" timestamp="1602807915881" />
     <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1050/1920.36.1680.1020@0.0.1920.1050" timestamp="1601941778428" />
-    <state width="1877" height="409" key="GridCell.Tab.1.right" timestamp="1603234352513">
+    <state width="1877" height="46" key="GridCell.Tab.1.right" timestamp="1603825472163">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state width="1877" height="46" key="GridCell.Tab.1.right/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603825472163" />
     <state width="1637" height="76" key="GridCell.Tab.1.right/0.0.1920.1050/-1680.27.1680.1020@-1680.27.1680.1020" timestamp="1602534115890" />
     <state width="1877" height="409" key="GridCell.Tab.1.right/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603234352513" />
     <state width="1877" height="235" key="GridCell.Tab.1.right/0.0.1920.1050/1920.27.1680.1020@0.0.1920.1050" timestamp="1602820073873" />
@@ -272,9 +311,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="860" y="88" key="SettingsEditor/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1603230691748" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1601937209117">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1603819219020">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1680.26.1680.1020@0.0.1920.1050" timestamp="1603819219020" />
     <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/-1680.27.1680.1020@0.0.1920.1050" timestamp="1601937209117" />
   </component>
 </project>

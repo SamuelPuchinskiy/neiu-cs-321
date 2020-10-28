@@ -5,17 +5,71 @@
 <head>
     <meta charset="UTF-8">
     <title>Taco Cloud</title>
+    <!-- BootStrap -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
     <link rel="stylesheet", th:href="@{/styles.css}"/>
 </head>
 <body>
-    <h1>Design your taco!</h1>
-    <img th:src="@{images/TacoCloud.png}"/>
 
-    <form method="post" th:object="${taco}">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand">Taco Cloud</span>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/login}">Login</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/design' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/design}">Design</a>
+                </li>
+
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/}">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid mt-5">
+
+        <div class="row justify-content-center" th:object="${session.user}">
+            <h2 class="font-italic">Hi, <span th:text="${fullname}">User Name</span> </h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <h2>Design your taco!</h2>
+        </div>
+
+        <div class="row justify-content-center mt-2 mb-2">
+            <img th:src="@{images/TacoCloud.png}"/>
+        </div>
+    </div>
+
+
+    <form class="container-fluid"  method="post" th:object="${taco}">
+
         <span class="validationError"
-                th:if="${#fields.hasErrors('ingredients')}"
-                th:errors="*{ingredients}">Ingredient Error</span>
-        <div class="grid">
+              th:if="${#fields.hasErrors('ingredients')}"
+              th:errors="*{ingredients}">Ingredient Error</span>
+
+        <div class="row form-group justify-content-center">
             <div class="ingredient-group" id="wraps">
                 <h3>Choose your wrap:</h3>
                 <div th:each="ingredient : ${wrap}">
@@ -23,7 +77,9 @@
                     <span th:text="${ingredient.name}">INGREDIENT</span><br/>
                 </div>
             </div>
+        </div>
 
+        <div class="row form-group justify-content-center">
             <div class="ingredient-group" id="proteins">
                 <h3>Pick your protein:</h3>
                 <div th:each="ingredient : ${protein}">
@@ -31,7 +87,9 @@
                     <span th:text="${ingredient.name}">INGREDIENT</span><br/>
                 </div>
             </div>
+        </div>
 
+        <div class="row form-group justify-content-center">
             <div class="ingredient-group" id="cheeses">
                 <h3>Choose your cheese:</h3>
                 <div th:each="ingredient : ${cheese}">
@@ -39,7 +97,9 @@
                     <span th:text="${ingredient.name}">INGREDIENT</span><br/>
                 </div>
             </div>
+        </div>
 
+        <div class="row form-group justify-content-center">
             <div class="ingredient-group" id="veggies">
                 <h3>Pick your veggies:</h3>
                 <div th:each="ingredient : ${veggies}">
@@ -47,7 +107,9 @@
                     <span th:text="${ingredient.name}">INGREDIENT</span><br/>
                 </div>
             </div>
+        </div>
 
+        <div class="row form-group justify-content-center">
             <div class="ingredient-group" id="sauces">
                 <h3>Select your Sauce:</h3>
                 <div th:each="ingredient : ${sauce}">
@@ -56,15 +118,27 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h3>Name your taco creation:</h3>
-            <input type="text" th:field="*{name}"/>
-            <span class="validationError"
-                th:if="${#fields.hasErrors('name')}"
-                th:errors="*{name}">Name Error</span>
-            <br/><br/>
-            <button>Submit your taco</button>
+
+        <div class="row form-group justify-content-center">
+            <div class="ingredient-group">
+                <h3>Name your taco creation:</h3>
+
+                <input class="form-control col-6" type="text" th:field="*{name}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('name')}"
+                      th:errors="*{name}">Name Error</span>
+                <br/><br/>
+
+                <button class="form-control col-6">Submit your taco</button>
+            </div>
         </div>
+
     </form>
+
+
+    <!-- BootStrap -->
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "astrology.birthday.pageSize",
+      "type": "java.lang.Integer",
+      "description": "Sets the maximum number of orders to display on a list."
+  }
+] }

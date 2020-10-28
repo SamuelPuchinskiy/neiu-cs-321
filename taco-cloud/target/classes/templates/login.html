@@ -6,31 +6,85 @@
 <head>
     <meta charset="UTF-8">
     <title>Taco Cloud</title>
+    <!-- BootStrap -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 <body>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand">Taco Cloud</span>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/login}">Login</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/design' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/design}">Design</a>
+                </li>
 
-    <h1>Login to Taco Cloud</h1>
-    <img th:src="@{images/TacoCloud.png}"/>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/}">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- -->
+
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <h1>Login to Taco Cloud</h1>
+        </div>
+        <div class="row justify-content-center mt-2 mb-2">
+            <img th:src="@{images/TacoCloud.png}"/>
+        </div>
+    </div>
+
     <div th:if="${error}">
         Unable to login. Check your username and password.
     </div>
+    <!--   <p>New here? Click <a th:href="@{/register}">here</a> to register.</p> -->
 
-    <p>New here? Click <a th:href="@{/register}">here</a> to register.</p>
+    <form class="container-fluid" method="post" th:action="@{/login}" id="loginForm">
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="username">Username: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="username" id="username"/> <br/> <br/>
+        </div>
 
-    <form method="post" th:action="@{/login}" id="loginForm">
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="password">Password: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="password" id="password"/> <br/> <br/>
+        </div>
 
-        <label for="username">Username: </label>
-        <input type="text" th:name="username" id="username"/> <br/> <br/>
-
-        <label for="password">Password: </label>
-        <input type="text" th:name="password" id="password"/> <br/> <br/>
-
-        <input type="submit" value="Login"/>
-
+        <div class="row form-group justify-content-center">
+            <span class="col-6 col-md-3"></span>
+            <input class="col-1 form-control" type="submit" value="Login"/>
+        </div>
     </form>
 
+
+
+    <!-- BootStrap -->
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
 </body>
 </html>

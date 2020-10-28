@@ -1,11 +1,14 @@
 package Astrology.web;
 
-import java.util.Iterator;
+//import java.awt.print.Pageable;
+//import java.util.Iterator;
 import java.util.List;
 
 import Astrology.*;
 import Astrology.data.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,16 +27,18 @@ public class MainController {
     private final DayRepository dayRepo;
     private final MonthRepository monthRepo;
     private final YearRepository yearRepo;
+    private final BirthdayProperty birthdayProperty;
 
     private UserRepository userRepo;
 
     @Autowired
-    public MainController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo, UserRepository userRepo) {
+    public MainController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo, UserRepository userRepo, BirthdayProperty birthdayProperty) {
         this.birthdayRepo = birthdayRepo;
         this.dayRepo = dayRepo;
         this.monthRepo = monthRepo;
         this.yearRepo = yearRepo;
         this.userRepo = userRepo;
+        this.birthdayProperty = birthdayProperty;
     }
 
     @ModelAttribute(name = "Birthday")
@@ -57,17 +62,13 @@ public class MainController {
         model.addAttribute("fullname", user.getFullname());
         model.addAttribute("userBirthday", user.getUserBirthday());
         model.addAttribute("id", user.getId());
-
-        //List<Birthday> bdayUser = (List<Birthday>) birthdayRepo.findAllByUser(user);
-        //model.addAttribute("bdayUser", bdayUser);
     }
 
     @ModelAttribute
     public void addBirthdayDataToUserPage(Model model, @AuthenticationPrincipal User user) {
-        //List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAll();
-        List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAllByUser(user);
-
-        model.addAttribute("bdayUsers", bdayUsers);//birthdayRepo.findAllByUser(user));
+        Pageable pageable = PageRequest.of(0, birthdayProperty.getPageSize());
+        List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAllByUser(user, pageable);
+        model.addAttribute("bdayUsers", bdayUsers);
     }
 
     /*

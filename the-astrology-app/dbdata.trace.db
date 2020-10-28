@@ -1,9 +1,0 @@
-2020-10-18 23:00:37 jdbc[13]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BIRTHDAY_DATA WHERE[*]"; expected "NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
-SELECT * FROM BIRTHDAY_DATA where [42001-200]
-2020-10-18 23:00:55 jdbc[13]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BIRTHDAY_DATA WHERE USER_ID IS 1[*]"; expected "NOT, OF, JSON, NULL, DISTINCT, TRUE, FALSE, UNKNOWN"; SQL statement:
-SELECT * FROM BIRTHDAY_DATA where USER_ID is 1 [42001-200]
-2020-10-18 23:01:25 jdbc[13]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM BIRTHDAY_DATA WHERE USER_ID IS 1[*]"; expected "NOT, OF, JSON, NULL, DISTINCT, TRUE, FALSE, UNKNOWN"; SQL statement:
-SELECT * FROM BIRTHDAY_DATA where USER_ID is 1 [42001-200]

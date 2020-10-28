@@ -5,13 +5,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Taco Cloud</title>
+    <!-- BootStrap -->
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
     <link rel="stylesheet", th:href="@{/styles.css}"/>
 </head>
 <body>
-    <form method="post" th:action="@{/orders}" th:object="${order}">
-        <h1>Order your taco creations!</h1>
-        <img th:src="@{/images/TacoCloud.png}"/>
-        <a th:href="@{/design}" id="another">Design another taco</a><br/>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <span class="navbar-brand">Taco Cloud</span>
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
+                    <a class="nav-link" th:href="@{/}">Home</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/login}">Login</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
+                    th:if="${#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/register}">Register</a>
+                </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/design' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/design}">Design</a>
+                </li>
+
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/}">Log Out</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <h1>Order your taco creations!</h1>
+        </div>
+        <div class="row justify-content-center mt-2 mb-2">
+            <img th:src="@{/images/TacoCloud.png}"/>
+        </div>
+    </div>
+            <!-- <a th:href="@{/design}" id="another">Design another taco</a><br/> -->
+
+    <form class="container-fluid"  method="post" th:action="@{/orders}" th:object="${order}">
 
         <div th:if="${#fields.hasErrors()}">
             <span class="validationError">
@@ -19,67 +65,97 @@
             </span>
         </div>
 
-        <h3>Deliver my taco masterpieces to...</h3>
+        <div class="row form-group justify-content-center">
+            <h3 class="font-weight-bolder">Deliver my taco masterpieces to...</h3>
+        </div>
 
-        <label for="name">Name: </label>
-        <input type="text" th:name="name" th:value="${fullName}" id="name"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('name')}"
-              th:errors="*{name}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="name">Name: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="name" th:value="${fullName}" id="name"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('name')}"
+                  th:errors="*{name}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <label for="street">Street: </label>
-        <input type="text" th:name="street" th:value="${street}" id="street"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('street')}"
-              th:errors="*{street}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="street">Street: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="street" th:value="${street}" id="street"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('street')}"
+                  th:errors="*{street}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <label for="city">City: </label>
-        <input type="text" th:name="city" th:value="${city}" id="city"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('city')}"
-              th:errors="*{city}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="city">City: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="city" th:value="${city}" id="city"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('city')}"
+                  th:errors="*{city}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <label for="state">State: </label>
-        <input type="text" th:name="state" th:value="${state}" id="state"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('state')}"
-              th:errors="*{state}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="state">State: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="state" th:value="${state}" id="state"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('state')}"
+                  th:errors="*{state}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <label for="zip">Zip code: </label>
-        <input type="text" th:name="zip" th:value="${zip}" id="zip"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('zip')}"
-              th:errors="*{zip}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="zip">Zip code: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:name="zip" th:value="${zip}" id="zip"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('zip')}"
+                  th:errors="*{zip}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <h3>Here's how I'll pay...</h3>
-        <label for="ccNumber">Credit Card #: </label>
-        <input type="text" th:field="*{ccNumber}" id="ccNumber"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('ccNumber')}"
-              th:errors="*{ccNumber}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <h3 class="font-weight-bolder">Here's how I'll pay...</h3>
+        </div>
 
-        <label for="ccExpiration">Expiration: </label>
-        <input type="text" th:field="*{ccExpiration}" id="ccExpiration"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('ccExpiration')}"
-              th:errors="*{ccExpiration}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="ccNumber">Credit Card #: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:field="*{ccNumber}" id="ccNumber"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('ccNumber')}"
+                  th:errors="*{ccNumber}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <label for="ccCVV">CVV: </label>
-        <input type="text" th:field="*{ccCVV}" id="ccCVV"/>
-        <span class="validationError"
-              th:if="${#fields.hasErrors('ccCVV')}"
-              th:errors="*{ccCVV}">Name Error</span>
-        <br/><br/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="ccExpiration">Expiration: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:field="*{ccExpiration}" id="ccExpiration"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('ccExpiration')}"
+                  th:errors="*{ccExpiration}">Name Error</span>
+            <br/><br/>
+        </div>
 
-        <input type="submit" value="Submit order"/>
+        <div class="row form-group justify-content-center">
+            <label class="col-form-label col-2 text-right font-weight-bold" for="ccCVV">CVV: </label>
+            <input class="form-control col-5 col-md-2" type="text" th:field="*{ccCVV}" id="ccCVV"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('ccCVV')}"
+                  th:errors="*{ccCVV}">Name Error</span>
+            <br/><br/>
+        </div>
+
+        <div class="row form-group justify-content-center">
+            <span class="col-6 col-md-3"></span>
+            <input class="col-1 form-control" type="submit" value="Submit Order"/>
+        </div>
 
     </form>
+
+
+    <!-- BootStrap -->
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
 </body>
 </html>

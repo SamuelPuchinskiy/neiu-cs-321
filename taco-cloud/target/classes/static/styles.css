@@ -1,14 +1,11 @@
 body {
-    max-width: max-content;
-    margin: auto;
+    font-family: Lato, Helvetica, sans-serif;
+    background-color: lightgrey;
+    font-size: 16pt;
 }
 
-h1 {
-    text-align: center;
-}
-
-.nav {
-    text-align: center;
+.nav-text-size {
+    font-size: 16pt;
 }
 
 div.ingredient-group:nth-child(odd) {
