@@ -1,20 +1,40 @@
 body {
-    marign:auto;
+    font-family: Comic Sans MS, Lato, Helevtica, sans-serif;
+    background-color: lightgrey;
 }
+/* apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
 
-.title {
-    margin: 3%;
-    font-family: Comic Sans MS;
-    font-size:350%;
-    text-align: center;
+footer {
+    font-family: Lato, Helevtica, sans-serif;
+    font-size: 2%;
 }
 
 .normal {
-    font-family: Comic Sans MS;
-    font-size:200%;
-    margin:1%;
-    padding:1%;
-    background: #f9f9f9;
+    font-size:150%;
+    background-color: lightsteelblue;
+    padding: 1%;
+    margin: 3%;
+    border-radius: 25px;
+}
+
+nav {
+    background-color: lightsteelblue;
+}
+
+.form-signin {
+
+}
+.form-signin-box {
+
+}
+
+.border {
+    border-style: solid;
+}
+
+.image {
+    height: auto;
+    width: 90%;
 }
 
 .formInput {
