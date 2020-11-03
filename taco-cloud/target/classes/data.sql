@@ -6,9 +6,9 @@ delete from Taco_Order;
 // deleting the tables does not persist the data to the next runtime
 
 
-delete from Ingredient;
+//delete from Ingredient;
 /* delete from User; */
-
+/*
 insert into Ingredient(id, name, type)
 values('FLTO', 'Flour Tortilla', 'WRAP');
 insert into Ingredient(id, name, type)
@@ -29,3 +29,4 @@ insert into Ingredient(id, name, type)
 values('SLSA', 'Salsa', 'SAUCE');
 insert into Ingredient(id, name, type)
 values('SRCM', 'Sour Cream', 'SAUCE');
+*/

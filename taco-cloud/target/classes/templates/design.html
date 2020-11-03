@@ -2,51 +2,15 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Taco Cloud</title>
-    <!-- BootStrap -->
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
-    <link rel="stylesheet", th:href="@{/styles.css}"/>
-</head>
+
+<head th:insert="fragments/base :: headContent"></head>
+
 <body>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <span class="navbar-brand">Taco Cloud</span>
-        <button class="navbar-toggler" type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
-                    <a class="nav-link" th:href="@{/}">Home</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/login}">Login</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/register}">Register</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/design' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/design}">Design</a>
-                </li>
 
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/}">Log Out</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div th:replace="fragments/base :: navgation"></div>
+
     <div class="container-fluid mt-5">
 
         <div class="row justify-content-center" th:object="${session.user}">
@@ -57,9 +21,7 @@
             <h2>Design your taco!</h2>
         </div>
 
-        <div class="row justify-content-center mt-2 mb-2">
-            <img th:src="@{images/TacoCloud.png}"/>
-        </div>
+        <div th:replace="fragments/base :: appImage"></div>
     </div>
 
 
@@ -137,8 +99,6 @@
 
 
     <!-- BootStrap -->
-    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+    <div th:insert="fragments/base :: scripts"></div>
 </body>
 </html>
