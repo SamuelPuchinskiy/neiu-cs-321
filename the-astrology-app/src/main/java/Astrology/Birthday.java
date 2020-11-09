@@ -29,6 +29,14 @@ public class Birthday implements Serializable {
     @NotNull(message = "You must choose a Day")
     private String birthDayUser;
 
+    private String yearZodiac = "null";
+
+    private String monthZodiac = "null";
+
+    private String numerology = "null";
+
+
+
     @ManyToOne
     private User user;
 

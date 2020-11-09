@@ -2,82 +2,17 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign In</title>
-    <meta name="viewport" content="shrink-to-fit=yes">
 
-    <!-- BootStrap -->
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
-    <link rel="stylesheet", th:href="@{styles.css}"/>
-
+<head th:insert="fragments/base :: headContent">
+    <title class="pageTitle">Sign In</title>
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <span class="navbar-brand">Astrology</span>
-        <button class="navbar-toggler" type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
-                    <a class="nav-link" th:href="@{/}">Home</a>
-                </li>
-
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/login}">Login</a>
-                </li>
-
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/register}">Sign Up</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/AstrologyMain}">Calculate Astrology</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain/loginpage' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/AstrologyMain/loginpage}">My Account</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/DisplayAll/Tables' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/DisplayAll/Tables}">Database Admin</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <form method="POST" th:action="@{/logout}">
-                        <input class="form-control" type="submit" value="Logout"/>
-                    </form>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
-        <div class="normal">
-            <div class="d-flex justify-content-center mb-1 mt-3">
-                <h1>Astrology</h1>
-            </div>
-            <div class="d-flex flex-row justify-content-center">
-                <div class="p-4 flex-fill">
-                    <img th:src="@{images/horoscope.png}" class="image" alt="An image with all the horoscope symbols and their names and dates."/>
-                </div>
-
-                <div class="p-4 flex-fill">
-                    <p><b>Welcome to Astrology</b></p>
-                    <p>What is Astrology?</p>
-                    <p>Astrology calculates the following: <i>Zodiac, Horoscope, and Numerology</i></p>
-                </div>
-            </div>
-        </div>
+        <div th:replace="fragments/base :: image"> </div>
 
         <div class="normal">
             <div class="d-flex justify-content-center mb-1 mt-3">
@@ -108,9 +43,7 @@
             </div>
         </div>
 
-        <footer>
-            <p><br/> &copy; Copyright @ 2020 Samuel Puchinskiy CS-321-1 Server Side Web Development <a th:href="@{/}"><b>Home</b></a></p>
-        </footer>
+        <div th:replace="fragments/base :: footer"></div>
     </div>
 
 
@@ -173,8 +106,6 @@
 
 
     <!-- BootStrap -->
-    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+    <div th:insert="fragments/base :: scripts"></div>
 </body>
 </html>

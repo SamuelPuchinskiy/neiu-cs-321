@@ -26,3 +26,10 @@ spring:
 astrology:
   birthday:
     pageSize: 5
+
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+    path: /error

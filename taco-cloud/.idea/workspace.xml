@@ -23,8 +23,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/CustomErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/fragments/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/Birthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/Birthday.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/MonthRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/MonthRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +160,11 @@
       <workItem from="1604242578458" duration="8776000" />
       <workItem from="1604419170763" duration="4441000" />
       <workItem from="1604425895286" duration="301000" />
+      <workItem from="1604625289850" duration="44000" />
+      <workItem from="1604625668930" duration="3442000" />
+      <workItem from="1604629932327" duration="749000" />
+      <workItem from="1604633707013" duration="1662000" />
+      <workItem from="1604772681763" duration="960000" />
     </task>
     <servers />
   </component>

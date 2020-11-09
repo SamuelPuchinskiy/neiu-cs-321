@@ -17,6 +17,18 @@ footer {
     border-radius: 25px;
 }
 
+.results {
+    font-size:150%;
+    background-color: lightsteelblue;
+    padding: 2%;
+    margin: 3%;
+    border-radius: 25px;
+}
+
+i {
+    color: navy;
+}
+
 nav {
     background-color: lightsteelblue;
 }

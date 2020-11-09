@@ -2,87 +2,22 @@
 <html lang="en"
       xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://wwww.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Your Account</title>
-    <meta name="viewport" content="shrink-to-fit=yes">
 
-    <!-- BootStrap -->
-    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.5.2/css/bootstrap.min.css}"/>
-    <link rel="stylesheet", th:href="@{/styles.css}"/>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<head th:insert="fragments/base :: headContent">
+    <title class="pageTitle">My Account</title>
 </head>
+
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <span class="navbar-brand">Astrology</span>
-        <button class="navbar-toggler" type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collaspe navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}">
-                    <a class="nav-link" th:href="@{/}">Home</a>
-                </li>
-
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/login' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/login}">Login</a>
-                </li>
-
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/register' ? 'active' : ''}"
-                    th:if="${#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/register}">Sign Up</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/AstrologyMain}">Calculate Astrology</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain/loginpage' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/AstrologyMain/loginpage}">My Account</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/DisplayAll/Tables' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/DisplayAll/Tables}">Database Admin</a>
-                </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
-                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <form method="POST" th:action="@{/logout}">
-                        <input class="form-control" type="submit" value="Logout"/>
-                    </form>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
-        <div class="normal">
-            <div class="d-flex justify-content-center mb-1 mt-3">
-                <h1>Astrology</h1>
-            </div>
-            <div class="d-flex flex-row justify-content-center">
-                <div class="p-4 flex-fill">
-                    <img th:src="@{/images/horoscope.png}" class="image" alt="An image with all the horoscope symbols and their names and dates."/>
-                </div> <!-- closes col1 -->
 
-                <div class="p-4 flex-fill">
-                    <p><b>Welcome to Astrology</b></p>
-                    <p>What is Astrology?</p>
-                    <p>Astrology calculates the following: <i>Zodiac, Horoscope, and Numerology</i></p>
-                </div> <!-- closes col2 -->
-            </div>
-        </div>
+        <div th:replace="fragments/base :: image"> </div>
 
         <div class="normal">
+
             <div class="d-flex justify-content-center mb-1 mt-3">
                 <h1>My Account</h1>
             </div>
@@ -102,17 +37,22 @@
             <div class="d-flex flex-row justify-content-center mb-1 mt-3">
                 <h1>Your Activity:</h1>
             </div>
-            <div th:each="user : ${bdayUsers}">
-                <p class="d-flex flex-row justify-content-left mb-1">For&nbsp;<span th:text="${user.birthMonthUser}">Month</span> &nbsp;<span th:text="${user.birthDayUser}">Day</span>,&nbsp;<span th:text="${user.birthYearUser}">Year</span>:&nbsp; &nbsp; RESULTS <br/>
-                </p>
+        </div>
+
+        <div class="results d-flex flex-row justify-content-center mb-1 mt-3" th:each="user : ${bdayUsers}">
+            <div>
+                <p>For&nbsp;<i><span th:text="${user.birthMonthUser}">Month</span> &nbsp;<span th:text="${user.birthDayUser}">Day</span>,&nbsp;<span th:text="${user.birthYearUser}">Year</span></i>:&nbsp;&nbsp;</p>
+                <p>Zodiac Animal:&nbsp;<i><span th:text="${user.yearZodiac}"></span>&nbsp;</i></p>
+                <p>Horoscope:&nbsp;<i><span th:text="${user.monthZodiac}"></span>&nbsp;</i></p>
+                <p>Numerology:&nbsp;<i><span th:text="${user.numerology}"></span>&nbsp;</i></p>
             </div>
         </div>
 
 
 
-        <footer>
-            <p><br/> &copy; Copyright @ 2020 Samuel Puchinskiy CS-321-1 Server Side Web Development <a th:href="@{/}"><b>Home</b></a></p>
-        </footer>
+
+        <div th:replace="fragments/base :: footer"></div>
+
     </div>
 
 <!--
@@ -177,8 +117,6 @@
 
 
     <!-- BootStrap -->
-    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
+    <div th:insert="fragments/base :: scripts"></div>
 </body>
 </html>
