@@ -27,78 +27,86 @@
 
     <form class="container-fluid"  method="post" th:object="${taco}">
 
-        <span class="validationError"
+        <!-- <span class="validationError"
               th:if="${#fields.hasErrors('ingredients')}"
-              th:errors="*{ingredients}">Ingredient Error</span>
+              th:errors="*{ingredients}">Ingredient Error</span> -->
+        <div class="container-fluid from-line-height">
+            <div class="row justify-content-center" th:if="${#fields.hasErrors('ingredients')}">
+                <span class="text-danger col-5 text-left pl-0 pr-0" th:errors="*{ingredients}">Ingredients Error</span> <br/><br/>
+                <span class="col-1"></span>
+            </div>
 
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group" id="wraps">
-                <h3>Choose your wrap:</h3>
-                <div th:each="ingredient : ${wrap}">
-                    <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Wraps: </h4>
+            </div>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                    <div class="col-3 form-check form-check-inline" th:each="ingredient : ${wrap}">
+                        <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                        <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
+                    </div>
+            </div>
+
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Protein: </h4>
+            </div>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <div class="col-3 form-check form-check-inline" th:each="ingredient : ${protein}">
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
-        </div>
 
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group" id="proteins">
-                <h3>Pick your protein:</h3>
-                <div th:each="ingredient : ${protein}">
-                    <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Cheese: </h4>
+            </div>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <div class="col-3 form-check form-check-inline" th:each="ingredient : ${cheese}">
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
-        </div>
 
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group" id="cheeses">
-                <h3>Choose your cheese:</h3>
-                <div th:each="ingredient : ${cheese}">
-                    <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Veggies: </h4>
+            </div>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <div class="col-3 form-check form-check-inline" th:each="ingredient : ${veggies}">
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
-        </div>
 
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group" id="veggies">
-                <h3>Pick your veggies:</h3>
-                <div th:each="ingredient : ${veggies}">
-                    <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Sauce: </h4>
+            </div>
+            <div class="row row-cols-6 justify-content-center mb-3">
+                <div class="col-3 form-check form-check-inline" th:each="ingredient : ${sauce}">
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
-        </div>
 
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group" id="sauces">
-                <h3>Select your Sauce:</h3>
-                <div th:each="ingredient : ${sauce}">
-                    <input name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                    <span th:text="${ingredient.name}">INGREDIENT</span><br/>
-                </div>
+            <div class="row justify-content-center form-group mt-5 mb-2">
+                    <h4 class="col-6 text-left pl-0 font-weight-bold">Name your taco creation:</h4>
+            </div>
+            <div class="row justify-content-center form-group mb-3">
+                <input class="col-4 pl-0 border border-dark" type="text" th:field="*{name}"/>
+                <span class="col-2"></span>
+            </div>
+
+            <div class="row justify-content-center" th:if="${#fields.hasErrors('name')}">
+                <span class="text-danger col-5 text-left pl-0 pr-0" th:errors="*{name}">Name Error</span><br/><br/>
+                <span class="col-1"></span>
+            </div>
+            <div class="row form-group mt-3 justify-content-center">
+                <input class="btn btn-outline-dark btn-lg col-m2-2 form-group" type="submit" value="Submit your taco"/><br/>
+                <span class="col-4"></span>
             </div>
         </div>
-
-        <div class="row form-group justify-content-center">
-            <div class="ingredient-group">
-                <h3>Name your taco creation:</h3>
-
-                <input class="form-control col-6" type="text" th:field="*{name}"/>
-                <span class="validationError"
-                      th:if="${#fields.hasErrors('name')}"
-                      th:errors="*{name}">Name Error</span>
-                <br/><br/>
-
-                <button class="form-control col-6">Submit your taco</button>
-            </div>
-        </div>
-
     </form>
 
 
     <!-- BootStrap -->
-    <div th:insert="fragments/base :: scripts"></div>
+    <th:block th:insert="fragments/base :: scripts"></th:block>
 </body>
 </html>

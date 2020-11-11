@@ -6,30 +6,18 @@
 <head th:insert="fragments/base :: headContent"></head>
 
 <body>
-
-<body>
-
     <div th:replace="fragments/base :: navgation"></div>
 
     <div class="container-fluid mt-5">
-
-        <div class="row justify-content-center" th:object="${session.user}">
-            <h2 class="font-italic">Hi, <span th:text="${fullname}">User Name</span> </h2>
-        </div>
-
         <div class="row justify-content-center">
-            <h2>Design your taco!</h2>
+            <h1 class="col-12 text-center">Update your taco!</h1>
         </div>
 
         <div th:replace="fragments/base :: appImage"></div>
     </div>
 
+    <form class="container-fluid"  method="post" th:action="@{/modify/update/{tacoId(tacoId=${taco.id})}" th:object="${taco}">
 
-    <form class="container-fluid"  method="post" th:object="${taco}">
-
-        <!-- <span class="validationError"
-              th:if="${#fields.hasErrors('ingredients')}"
-              th:errors="*{ingredients}">Ingredient Error</span> -->
         <div class="container-fluid from-line-height">
             <div class="row justify-content-center" th:if="${#fields.hasErrors('ingredients')}">
                 <span class="text-danger col-5 text-left pl-0 pr-0" th:errors="*{ingredients}">Ingredients Error</span> <br/><br/>
@@ -40,10 +28,11 @@
                 <h4 class="col-6 text-left pl-0 font-weight-bold">Wraps: </h4>
             </div>
             <div class="row row-cols-6 justify-content-center mb-3">
-                    <div class="col-3 form-check form-check-inline" th:each="ingredient : ${wrap}">
-                        <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
-                        <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
-                    </div>
+                <div class="col-3 form-check form-check-inline" th:each="ingredient : ${wrap}">
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"
+                           th:checked="${#lists.contains(ingredientIds, ingredient.id)}"/>
+                    <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
+                </div>
             </div>
 
             <div class="row row-cols-6 justify-content-center mb-3">
@@ -51,7 +40,8 @@
             </div>
             <div class="row row-cols-6 justify-content-center mb-3">
                 <div class="col-3 form-check form-check-inline" th:each="ingredient : ${protein}">
-                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"
+                           th:checked="${#lists.contains(ingredientIds, ingredient.id)}"/>
                     <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
@@ -61,7 +51,8 @@
             </div>
             <div class="row row-cols-6 justify-content-center mb-3">
                 <div class="col-3 form-check form-check-inline" th:each="ingredient : ${cheese}">
-                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"
+                           th:checked="${#lists.contains(ingredientIds, ingredient.id)}"/>
                     <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
@@ -71,7 +62,8 @@
             </div>
             <div class="row row-cols-6 justify-content-center mb-3">
                 <div class="col-3 form-check form-check-inline" th:each="ingredient : ${veggies}">
-                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"
+                           th:checked="${#lists.contains(ingredientIds, ingredient.id)}"/>
                     <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
@@ -81,13 +73,14 @@
             </div>
             <div class="row row-cols-6 justify-content-center mb-3">
                 <div class="col-3 form-check form-check-inline" th:each="ingredient : ${sauce}">
-                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"/>
+                    <input class="form-check-inline text-left" name="ingredients" type="checkbox" th:value="${ingredient.id}"
+                           th:checked="${#lists.contains(ingredientIds, ingredient.id)}"/>
                     <label class="form-check-label" th:for="${ingredient.id}" th:text="${ingredient.name}">INGREDIENT</label><br/>
                 </div>
             </div>
 
             <div class="row justify-content-center form-group mt-5 mb-2">
-                    <h4 class="col-6 text-left pl-0 font-weight-bold">Name your taco creation:</h4>
+                <h4 class="col-6 text-left pl-0 font-weight-bold">Name your taco creation:</h4>
             </div>
             <div class="row justify-content-center form-group mb-3">
                 <input class="col-4 pl-0 border border-dark" type="text" th:field="*{name}"/>
@@ -99,14 +92,16 @@
                 <span class="col-1"></span>
             </div>
             <div class="row form-group mt-3 justify-content-center">
-                <input class="btn btn-outline-dark btn-lg col-m2-2 form-group" type="submit" value="Submit your taco"/><br/>
+                <a th:href="@{/view/all}" class="btn btn-outline-dark btn-lg col-auto form-group mr-2">Cancel</a>
+                <input class="btn btn-outline-dark btn-lg col-auto form-group" type="submit" value="Update"/><br/>
                 <span class="col-4"></span>
             </div>
         </div>
     </form>
 
 
-    <!-- BootStrap -->
+
+
     <th:block th:insert="fragments/base :: scripts"></th:block>
 </body>
 </html>

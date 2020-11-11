@@ -39,9 +39,16 @@
                     <a class="nav-link" th:href="@{/design}">Design</a>
                 </li>
 
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/view/all' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}">
+                    <a class="nav-link" th:href="@{/view/all}">View All</a>
+                </li>
+
                 <li class="nav-item" th:classappend="${#request.getServletPath() == '/' ? 'active' : ''}"
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/}">Log Out</a>
+                    <form method="POST" th:action="@{/logout}">
+                        <input class="form-control" type="submit" value="Logout"/>
+                    </form>
                 </li>
             </ul>
         </div>
@@ -59,17 +66,21 @@
 -->
 
 
-
-    <div th:fragment="appImage" class="row justify-content-center mt-2 mb-2">
-        <img th:src="@{/images/TacoCloud.png}"/>
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <h1 class="col-12 text-center">Welcome to...</h1>
+        </div>
+        <div th:fragment="appImage" class="row justify-content-center mt-2 mb-2">
+            <img th:src="@{/images/TacoCloud.png}"/>
+        </div>
     </div>
 
 
     <!-- BootStrap -->
-    <div th:fragment="scripts">
+    <th:block th:fragment="scripts">
         <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
-    </div>
+    </th:block>
 </body>
 </html>
