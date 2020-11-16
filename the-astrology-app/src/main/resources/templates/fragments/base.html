@@ -85,31 +85,11 @@
     </div>
 
 
-    <!--
-        <div class="row h-100">
-            <div class="col-sm-12 auto">
-                <div class="card card-block w-75 mx-auto">
-                    <div class="row">
-                        <div class="col-4">
-                            <img th:src="@{images/horoscope.png}" class="responsive" width="100%"  height="100%" alt="An image with all the horoscope symbols and their names and dates."/>
-                        </div>
-                        <div class="col-8">
-                            <p class="normal">Welcome to the Astrology App Home Page</p>
-                            <p class="home-text">To continue, please <a th:href="@{/login}">Login</a></p>
-                            <p class="home-text">First time here? <a th:href="@{/register}">Sign Up</a> to reveal your astrological chart! </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    -->
-
-    <div th:fragment="scripts">
+    <th:block th:fragment="scripts">
     <!-- BootStrap -->
         <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/1.16.0/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/4.5.2/js/bootstrap.min.js}"></script>
-    </div>
+    </th:block>
 </body>
 </html>

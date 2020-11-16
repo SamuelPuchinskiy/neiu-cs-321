@@ -10,7 +10,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Data
-public class SignUpForm {
+public class EditForm {
 
     @NotNull
     @Size(min = 5, max = 50, message = "Username must have at least 5 to 50 characters (Case Sensitive)")
@@ -39,6 +39,4 @@ public class SignUpForm {
     public User toUser(PasswordEncoder passwordEncoder) {
         return new User(username, passwordEncoder.encode(password), email, fullname, cell, userBirthday);
     }
-
-
 }

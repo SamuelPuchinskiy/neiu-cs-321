@@ -16,7 +16,7 @@
         <div th:replace="fragments/base :: appImage"></div>
     </div>
 
-    <form class="container-fluid"  method="post" th:action="@{/modify/update/{tacoId(tacoId=${taco.id})}" th:object="${taco}">
+    <form class="container-fluid"  method="post" th:action="@{/modify/update/{tacoId}(tacoId=${taco.id})}" th:object="${taco}">
 
         <div class="container-fluid from-line-height">
             <div class="row justify-content-center" th:if="${#fields.hasErrors('ingredients')}">

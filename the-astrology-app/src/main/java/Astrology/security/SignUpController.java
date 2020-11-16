@@ -40,8 +40,6 @@ public class SignUpController {
 
     @PostMapping
     public String processSignUp(@Valid @ModelAttribute("signUpForm") SignUpForm signUpForm, Errors errors) {
-        //DOES NOT ALWAYS SHOW ERRORS
-        //Will not proceed to the next page until there is no errors, but wont always show the errors
         if(errors.hasErrors())
             return  "/signup";
 
@@ -53,6 +51,5 @@ public class SignUpController {
         }
         return "redirect:/login";
     }
-
 
 }

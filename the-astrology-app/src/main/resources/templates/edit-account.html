@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+
+<head th:insert="fragments/base :: headContent">
+    <title class="pageTitle">Edit Account</title>
+</head>
+
+<body>
+
+    <div th:replace="fragments/base :: navigation"></div>
+
+    <div class="container mt-5">
+        <div th:replace="fragments/base :: image"> </div>
+
+
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <h2>Edit My Account</h2>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                    <h5>Please be advised that once hit submit, the page will require you to login with your new information.</h5>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row justify-content-center">
+
+                <!-- th:action="@{/edit-account/update/{userId}(userId=${id})}"  -->
+                <form method="post" th:action="@{/edit-account/update}" th:object="${editForm}">
+                    <div th:object="${user}">
+
+                        <div class="p-2">
+                            <label for="username">Username: </label>
+                            <input class="form-control" type="text" placeholder="5 or more characters" th:name="username" th:value="*{username}" id="username" required autofocus/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</span>
+                        </div>
+
+                        <div class="p-2">
+                            <label for="password">Password: </label>
+                            <input class="form-control" type="password" placeholder="8 or more characters"  th:name="password" id="password" required/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</span>
+                        </div>
+
+                        <div class="p-2">
+                            <label for="email">Email: </label>
+                            <input class="form-control" type="text" placeholder="5 or more characters"  th:name="email" th:value="*{email}" id="email" required/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
+                        </div>
+
+                        <div class="p-2">
+                            <label for="fullname">Name: </label>
+                            <input class="form-control" type="text" placeholder="5 or more characters" th:name="fullname" th:value="*{fullname}" id="fullname" required/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('fullname')}" th:errors="*{fullname}">Name Error</span>
+                        </div>
+
+                        <div class="p-2">
+                            <label for="cell">Cell: </label>
+                            <input class="form-control" type="text" placeholder="XXX-XXX-XXXX" th:name="cell" th:value="*{cell}" id="cell" required/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('cell')}" th:errors="*{cell}">Cell Error</span>
+                        </div>
+
+                        <div class="p-2">
+                            <label for="userBirthday">Birthday: </label>
+                            <input class="form-control" type="text" placeholder="MM/DD/YYYY" th:name="userBirthday" th:value="*{userBirthday}" id="userBirthday" required/>
+                            <span class="form-control validationError" th:if="${#fields.hasErrors('userBirthday')}" th:errors="*{userBirthday}">Birthday Error</span>
+                        </div>
+
+                    </div>
+
+                    <div class="p-2">
+                        <span class=""></span>
+                        <button type="button" class="form-control form-signin-box" ><a th:href="@{/AstrologyMain/loginpage}">Cancel</a></button> <br/>
+                        <input class="form-control form-signin-box" type="submit" value="Update"/>
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+        <div th:replace="fragments/base :: footer"></div>
+
+<!-- BootStrap -->
+<th:block th:insert="fragments/base :: scripts"></th:block>
+</body>
+</html>

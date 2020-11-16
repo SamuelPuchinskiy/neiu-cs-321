@@ -4,24 +4,33 @@
       xmlns:th="http://wwww.thymeleaf.org">
 
 <head th:insert="fragments/base :: headContent">
-    <title class="pageTitle">Calculator</title>
+    <title class="pageTitle">Edit</title>
 </head>
 
 
 <body>
 
-    <div th:replace="fragments/base :: navigation"></div>
+<div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
         <div th:replace="fragments/base :: image"> </div>
 
         <div class="normal">
             <div class="d-flex justify-content-center mb-1 mt-3">
-                <h2>Please provide a birthday below to calculate the Zodiac, Birthday, and Numerology</h2>
+                <div>
+                    <h3>Please edit the birthday below to recalculate the Zodiac, Birthday, and Numerology</h3>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div>
+                    <p>
+                        Editing the following: <div class="form-control"> <span th:text="${userMonth}">Month</span>&nbsp;<span th:text="${userDay}">Day</span>,&nbsp;<span th:text="${userYear}">Year</span>&nbsp;</div>
+                    </p>
+                </div>
             </div>
 
             <div class="d-flex justify-content-center mb-1 mt-3">
-                <form method="post" th:object="${birthdayUser}">
+                <form method="post" th:action="@{/modify/edits/{birthdayId}(birthdayId=${birthdayId})}" th:object="${birthdayUser}">
 
                     <div class="p-2">
                         <p>
@@ -32,7 +41,7 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthYearUser')}"
                                               th:errors="*{birthYearUser}">Year Error
-                                               </span>
+                                                   </span>
                                     </option>
                                 </div>
                             </select>
@@ -48,7 +57,7 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthMonthUser')}"
                                               th:errors="*{birthMonthUser}">Month Error
-                                               </span>
+                                                   </span>
                                     </option>
                                 </div>
                             </select>
@@ -64,18 +73,17 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthDayUser')}"
                                               th:errors="*{birthDayUser}">Day Error
-                                               </span>
+                                                   </span>
                                     </option>
                                 </div>
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <span class=""></span>
-                        <input class="form-control form-signin-box" type="submit" value="Submit"/>
+                        <button type="button" class="form-control form-signin-box" ><a th:href="@{/AstrologyMain/loginpage}">Cancel</a></button> <br/>
+                        <input class="form-control form-signin-box" type="submit" value="Update"/>
                     </div>
-
                 </form>
             </div>
         </div>

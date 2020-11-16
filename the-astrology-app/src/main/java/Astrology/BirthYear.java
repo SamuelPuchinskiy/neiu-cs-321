@@ -16,5 +16,4 @@ public class BirthYear {
     @Id
     private final String yearID;
     private final String name;
-    //private final boolean leapYear;
 }

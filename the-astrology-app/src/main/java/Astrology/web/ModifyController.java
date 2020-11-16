@@ -1,38 +1,33 @@
 package Astrology.web;
 
-//import java.awt.print.Pageable;
-//import java.util.Iterator;
-import java.util.List;
-
 import Astrology.*;
 import Astrology.data.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import lombok.extern.slf4j.Slf4j;
+
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @Controller
-@RequestMapping("/AstrologyMain")
-@SessionAttributes("Birthday")
-public class MainController {
+@RequestMapping("/modify")
+public class ModifyController {
 
-    private final BirthdayRepository birthdayRepo;
-    private final DayRepository dayRepo;
-    private final MonthRepository monthRepo;
-    private final YearRepository yearRepo;
-    private final BirthdayProperty birthdayProperty;
+    private BirthdayRepository birthdayRepo;
+    private DayRepository dayRepo;
+    private MonthRepository monthRepo;
+    private YearRepository yearRepo;
+    private BirthdayProperty birthdayProperty;
 
     private UserRepository userRepo;
 
     @Autowired
-    public MainController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo, UserRepository userRepo, BirthdayProperty birthdayProperty) {
+    public ModifyController(BirthdayRepository birthdayRepo, DayRepository dayRepo, MonthRepository monthRepo, YearRepository yearRepo, UserRepository userRepo, BirthdayProperty birthdayProperty) {
         this.birthdayRepo = birthdayRepo;
         this.dayRepo = dayRepo;
         this.monthRepo = monthRepo;
@@ -41,75 +36,52 @@ public class MainController {
         this.birthdayProperty = birthdayProperty;
     }
 
-    @ModelAttribute(name = "Birthday")
-    public Birthday addBirthdayToModel() {
-        return new Birthday();
+
+    @GetMapping("/{birthdayId}")
+    public String editBirthday(@PathVariable("birthdayId") Long id, Model model) {
+
+        Birthday bday = birthdayRepo.findById(id);
+
+
+        String userYear = bday.getBirthYearUser();
+        String userMonth = bday.getBirthMonthUser();
+        String userDay = bday.getBirthDayUser();
+
+        model.addAttribute("userYear", userYear);
+        model.addAttribute("userMonth", userMonth);
+        model.addAttribute("userDay", userDay);
+
+        model.addAttribute("bday", bday);
+
+        return "edit-birthday";
     }
 
-    @GetMapping
-    public String showDesignForm(Model model) {
-        return "birthday";
-    }
-
-    @GetMapping("/loginpage")
-    public String displayUserLogin(Model model, @AuthenticationPrincipal User user) {
-        addUserInforToModel(model, user);
-        addBirthdayDataToUserPage(model, user);
-        return "loginpage";
-    }
-
-    private void addUserInforToModel(Model model, @AuthenticationPrincipal User user) {
-        model.addAttribute("fullname", user.getFullname());
-        model.addAttribute("userBirthday", user.getUserBirthday());
-        model.addAttribute("id", user.getId());
-    }
-
-    @ModelAttribute
-    public void addBirthdayDataToUserPage(Model model, @AuthenticationPrincipal User user) {
-        Pageable pageable = PageRequest.of(0, birthdayProperty.getPageSize());
-        List<Birthday> bdayUsers = (List<Birthday>) birthdayRepo.findAllByUser(user, pageable);
-        model.addAttribute("bdayUsers", bdayUsers);
-    }
-
-    @ModelAttribute(name = "Birth_Month")
-    public void addMonthToModel(Model model) {
-        List<BirthMonth> months = (List<BirthMonth>) monthRepo.findAll();
-        model.addAttribute("months", months);
-    }
-
-    @ModelAttribute(name = "Birth_Year")
-    public void addYearToModel(Model model) {
-        List<BirthYear> years = (List<BirthYear>) yearRepo.findAll();
-        model.addAttribute("year", years);
-    }
-
-    @ModelAttribute(name = "Day")
-    public void addDayToModel(Model model) {
-        List<Day> days = (List<Day>) dayRepo.findAll();
-        model.addAttribute("days", days);
-    }
-
-    @PostMapping
-    public String processDesign(@Valid @ModelAttribute("birthdayUser") Birthday birthdayUser, Errors errors, @AuthenticationPrincipal User user) {
+    @PostMapping("/edits/{birthdayId}")
+    public String processEditBirthday(@PathVariable("birthdayId") Long id, @Valid @ModelAttribute("birthdayUser") Birthday birthdayUser, Errors errors) {
         if (errors.hasFieldErrors()) {
-            return "birthday";
+            return "edit-birthday";
         }
 
-        birthdayUser.setUser(user);
+        Birthday newbday = birthdayRepo.findById(id);
 
-        birthdayUser.setYearZodiac(YearAlgorithm(birthdayUser.getBirthYearUser()));
+        newbday.setBirthYearUser(birthdayUser.getBirthYearUser());
+        newbday.setBirthMonthUser(birthdayUser.getBirthMonthUser());
+        newbday.setBirthDayUser(birthdayUser.getBirthDayUser());
 
-        birthdayUser.setMonthZodiac(MonthAlgorithm(birthdayUser.getBirthMonthUser(), birthdayUser.getBirthDayUser()));
+        newbday.setYearZodiac(YearAlgorithm(newbday.getBirthYearUser()));
+        newbday.setMonthZodiac(MonthAlgorithm(newbday.getBirthMonthUser(), newbday.getBirthDayUser()));
+        newbday.setNumerology(NumerologyAlgorithm(newbday.getBirthYearUser(), newbday.getBirthMonthUser(), newbday.getBirthDayUser()));
 
-        birthdayUser.setNumerology(NumerologyAlgorithm(birthdayUser.getBirthYearUser(), birthdayUser.getBirthMonthUser(), birthdayUser.getBirthDayUser()));
+
+        Birthday savedBirthday = birthdayRepo.save(newbday);
+
+        log.info("Processing..." + newbday);
 
 
-
-        Birthday savedBirthday = birthdayRepo.save(birthdayUser);
-
-        log.info("Processing..." + birthdayUser);
         return "redirect:/Submit/Results";
+
     }
+
 
     public int getMonthInteger(String month) {
 
@@ -351,4 +323,37 @@ public class MainController {
 
         return value;
     }
+
+
+    @ModelAttribute(name = "Birth_Month")
+    public void addMonthToModel(Model model) {
+        List<BirthMonth> months = (List<BirthMonth>) monthRepo.findAll();
+        model.addAttribute("months", months);
+    }
+
+    @ModelAttribute(name = "Birth_Year")
+    public void addYearToModel(Model model) {
+        List<BirthYear> years = (List<BirthYear>) yearRepo.findAll();
+        model.addAttribute("year", years);
+    }
+
+    @ModelAttribute(name = "Day")
+    public void addDayToModel(Model model) {
+        List<Day> days = (List<Day>) dayRepo.findAll();
+        model.addAttribute("days", days);
+    }
+
+    @PostMapping("/delete/{birthdayId}")
+    public String deleteBirthday(@PathVariable("birthdayId") long id, Model model) {
+
+        //birthdayRepo.deleteById(id);
+
+        Birthday date = birthdayRepo.findById(id);
+
+        birthdayRepo.delete(date);
+
+        return "redirect:/Submit/Results";
+    }
+
+
 }

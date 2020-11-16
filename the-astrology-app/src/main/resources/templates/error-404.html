@@ -9,22 +9,22 @@
 
 <body>
 
-<div th:replace="fragments/base :: navigation"></div>
+    <div th:replace="fragments/base :: navigation"></div>
 
-<div class="container mt-5">
-    <div th:replace="fragments/base :: image"> </div>
+    <div class="container mt-5">
+        <div th:replace="fragments/base :: image"> </div>
 
-    <div class="normal d-flex justify-content-center mb-1 mt-3">
-        <div>
-            <h2 class="validationError">Error Code: 404</h2>
-            <p>This page is quarantining for the next two weeks.</p>
+        <div class="normal d-flex justify-content-center mb-1 mt-3">
+            <div>
+                <h2 class="validationError">Error Code: 404</h2>
+                <p>This page is quarantining for the next two weeks.</p>
+            </div>
         </div>
+
+        <div th:replace="fragments/base :: footer"></div>
     </div>
 
-    <div th:replace="fragments/base :: footer"></div>
-</div>
-
-<!-- BootStrap -->
-<div th:insert="fragments/base :: scripts"></div>
+    <!-- BootStrap -->
+    <th:block th:insert="fragments/base :: scripts"></th:block>
 </body>
 </html>
