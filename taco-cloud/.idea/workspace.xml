@@ -22,29 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.trace.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/ModifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/edit-birthday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/update-taco.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/update-taco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/update-taco.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/update-taco.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/data/BirthdayRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/birthday.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/databaseview.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-404.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-500.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error-500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/fragments/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/fragments/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/loginpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/submitresults.html" afterDir="false" />
-    </list>
+    <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,6 +148,7 @@
       <workItem from="1605028314986" duration="14186000" />
       <workItem from="1605135720557" duration="361000" />
       <workItem from="1605387603803" duration="5610000" />
+      <workItem from="1605627494119" duration="617000" />
     </task>
     <servers />
   </component>
