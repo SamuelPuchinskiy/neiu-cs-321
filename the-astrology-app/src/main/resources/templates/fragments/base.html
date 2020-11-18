@@ -47,6 +47,10 @@
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
                     <a class="nav-link" th:href="@{/AstrologyMain/loginpage}">My Account</a>
                 </li>
+                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain/loginpage' ? 'active' : ''}"
+                    th:if="${!#authentication.getName().equals('anonymousUser')}" >
+                    <a class="nav-link" th:href="@{/Horoscope}">Horoscope</a>
+                </li>
                 <li class="nav-item" th:classappend="${#request.getServletPath() == '/DisplayAll/Tables' ? 'active' : ''}"
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
                     <a class="nav-link" th:href="@{/DisplayAll/Tables}">Database Admin</a>

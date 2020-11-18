@@ -22,7 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="" />
+    <list default="true" id="76ea29a8-f90c-43d4-b72f-b23cec59f871" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/web/YearlyHoroscopeDisplayController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/horoscope-api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/dbdata.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/java/Astrology/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/fragments/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../the-astrology-app/src/main/resources/templates/fragments/base.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -149,6 +156,7 @@
       <workItem from="1605135720557" duration="361000" />
       <workItem from="1605387603803" duration="5610000" />
       <workItem from="1605627494119" duration="617000" />
+      <workItem from="1605656479635" duration="984000" />
     </task>
     <servers />
   </component>
