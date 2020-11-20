@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+
+<head th:insert="fragments/base :: headContent">
+    <title class="pageTitle">Sagittarius</title>
+</head>
+
+<body>
+    <div th:replace="fragments/base :: navigation"></div>
+
+    <div class="container mt-5">
+        <div th:replace="fragments/base :: image"> </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h1>Sagittarius Horoscope</h1>
+                    <h4>November 22 - December 21</h4>
+                    <h4><span th:text="${#dates.format(#dates.createNow(), 'E, MMMM dd, yyyy -- HH:mm')}">Full Date</span></h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <h2>This Year's Sagittarius Horoscope</h2>
+                    <p><i><span th:text="${#dates.format(#dates.createNow(), 'yyyy')}">Year</span></i></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-1" data-toggle="collapse" data-target="#year">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-view-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                        </svg>
+                    </button>&nbsp;
+                    <div id="year" class="collapse"><p><span th:text="${sagittariusYear}">Year</span></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <h2>This Month's Sagittarius Horoscope</h2>
+                    <p><i><span th:text="${#dates.format(#dates.createNow(), 'MMMM')}">Month</span></i></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-1" data-toggle="collapse" data-target="#month">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-view-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                        </svg>
+                    </button>&nbsp;
+                    <div id="month" class="collapse"><p><span th:text="${sagittariusMonth}">Month</span></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <h2>This Week's Sagittarius Horoscope</h2>
+                    <p><i><span th:text="${#dates.format(#dates.createNow(), 'w')}">Week</span></i></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-1" data-toggle="collapse" data-target="#week">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-view-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                        </svg>
+                    </button>&nbsp;
+                    <div id="week" class="collapse"><p><span th:text="${sagittariusWeek}">Week</span></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <h2>Today's Sagittarius Horoscope</h2>
+                    <p><i><span th:text="${#dates.format(#dates.createNow(), 'E, MMMM dd, yyyy')}">Today</span></i></p>
+                </div>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="p-2">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-1" data-toggle="collapse" data-target="#today">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-view-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3 4.5h10a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2zm0 1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1H3zM1 2a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 2zm0 12a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 14z"/>
+                        </svg>
+                    </button>&nbsp;
+                    <div id="today" class="collapse"><p><span th:text="${sagittariusToday}">Today</span></p></div>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/base :: footer"></div>
+    </div>
+
+    <!-- BootStrap -->
+    <th:block th:insert="fragments/base :: scripts"></th:block>`
+</body>
+</html>

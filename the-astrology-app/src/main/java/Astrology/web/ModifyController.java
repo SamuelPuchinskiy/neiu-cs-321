@@ -77,9 +77,7 @@ public class ModifyController {
 
         log.info("Processing..." + newbday);
 
-
         return "redirect:/Submit/Results";
-
     }
 
 

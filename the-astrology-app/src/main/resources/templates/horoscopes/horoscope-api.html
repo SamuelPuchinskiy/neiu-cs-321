@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org">
+
+<head th:insert="fragments/base :: headContent">
+    <title class="pageTitle">Zodiacs</title>
+</head>
+
+<body>
+
+    <div th:replace="fragments/base :: navigation"></div>
+
+    <div class="container mt-5">
+        <div th:replace="fragments/base :: image"> </div>
+
+
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <h1>Zodiacs</h1>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Aquarius</h2>
+                    <p>January 20 - February 18</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Aquarius}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Pisces</h2>
+                    <p>February 19 - March 20</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Pisces}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Aries</h2>
+                    <p>March 21 - April 19</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Aries}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Taurus</h2>
+                    <p>April 20 - May 20</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Taurus}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Gemini</h2>
+                    <p>May 21 - June 20</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Gemini}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Cancer</h2>
+                    <p>June 21 - July 22</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Cancer}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Leo</h2>
+                    <p>July 23 - August 22</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Leo}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Virgo</h2>
+                    <p>August 23 - September 22</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Virgo}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Libra</h2>
+                    <p>September 23 - October 22</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Libra}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Scorpio</h2>
+                    <p>October 23 - November 21</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Scorpio}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Sagittarius</h2>
+                    <p>November 22 - December 21</p>
+                    <p><a target="_blank" th:href="@{/Horoscope/Sagittarius}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="normal">
+            <div class="d-flex justify-content-center mb-1 mt-3">
+                <div class="p-2">
+                    <h2>Capricorn </h2>
+                    <p>December 22 - January 19</p>
+                    <i>The best for last</i>
+                    <p><a target="_blank" th:href="@{/Horoscope/Capricorn}">View Horoscope</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div th:replace="fragments/base :: footer"></div>
+    </div>
+
+    <!-- BootStrap -->
+    <th:block th:insert="fragments/base :: scripts"></th:block>`
+</body>
+</html>

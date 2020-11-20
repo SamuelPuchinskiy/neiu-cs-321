@@ -15,7 +15,7 @@
 <body>
 
     <nav th:fragment="navigation" class="navbar navbar-expand-lg navbar-light">
-        <span class="navbar-brand">Astrology</span>
+        <span class="navbar-brand"><a class="removeBlue" th:href="@{/}">Astrology</a></span>
         <button class="navbar-toggler" type="button"
                 data-toggle="collapse"
                 data-target="#navbarSupportedContent"
@@ -47,10 +47,28 @@
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
                     <a class="nav-link" th:href="@{/AstrologyMain/loginpage}">My Account</a>
                 </li>
-                <li class="nav-item" th:classappend="${#request.getServletPath() == '/AstrologyMain/loginpage' ? 'active' : ''}"
+
+                <li class="nav-item dropdown" th:classappend="${#request.getServletPath() == '/Horoscope' ? 'active' : ''}"
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
-                    <a class="nav-link" th:href="@{/Horoscope}">Horoscope</a>
+                    <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Horoscope</a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope}">Zodiacs</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Aquarius}">Aquarius</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Pisces}">Pisces</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Aries}">Aries</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Taurus}">Taurus</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Gemini}">Gemini</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Cancer}">Cancer</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Leo}">Leo</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Virgo}">Virgo</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Libra}">Libra</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Scorpio}">Scorpio</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Sagittarius}">Sagittarius</a>
+                        <a class="dropdown-item" target="_blank" th:href="@{/Horoscope/Capricorn}">Capricorn</a>
+                    </div>
                 </li>
+
+
                 <li class="nav-item" th:classappend="${#request.getServletPath() == '/DisplayAll/Tables' ? 'active' : ''}"
                     th:if="${!#authentication.getName().equals('anonymousUser')}" >
                     <a class="nav-link" th:href="@{/DisplayAll/Tables}">Database Admin</a>
