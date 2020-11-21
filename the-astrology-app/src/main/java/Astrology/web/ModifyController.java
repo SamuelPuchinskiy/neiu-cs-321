@@ -352,6 +352,4 @@ public class ModifyController {
 
         return "redirect:/Submit/Results";
     }
-
-
 }
