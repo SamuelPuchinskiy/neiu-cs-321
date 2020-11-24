@@ -12,7 +12,6 @@ import javax.persistence.Id;
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @RequiredArgsConstructor
 public class BirthYear {
-
     @Id
     private final String yearID;
     private final String name;

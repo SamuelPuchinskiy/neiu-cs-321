@@ -7,10 +7,8 @@
     <title class="pageTitle">Edit</title>
 </head>
 
-
 <body>
-
-<div th:replace="fragments/base :: navigation"></div>
+    <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
         <div th:replace="fragments/base :: image"> </div>
@@ -28,7 +26,6 @@
                     </p>
                 </div>
             </div>
-
             <div class="d-flex justify-content-center mb-1 mt-3">
                 <form method="post" th:action="@{/modify/edits/{birthdayId}(birthdayId=${birthdayId})}" th:object="${birthdayUser}">
 
@@ -41,13 +38,12 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthYearUser')}"
                                               th:errors="*{birthYearUser}">Year Error
-                                                   </span>
+                                        </span>
                                     </option>
                                 </div>
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <p>
                             <b>Please choose your birth month: </b>
@@ -57,13 +53,12 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthMonthUser')}"
                                               th:errors="*{birthMonthUser}">Month Error
-                                                   </span>
+                                        </span>
                                     </option>
                                 </div>
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <p>
                             <b>Please choose your birth day: </b>
@@ -73,7 +68,7 @@
                                         <span class="validationError"
                                               th:if="${#fields.hasErrors('birthDayUser')}"
                                               th:errors="*{birthDayUser}">Day Error
-                                                   </span>
+                                        </span>
                                     </option>
                                 </div>
                             </select>

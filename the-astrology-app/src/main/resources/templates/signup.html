@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
@@ -27,45 +26,36 @@
 
                 <!-- Start of Registration Form -->
                 <form method="post" th:action="@{/register}" th:object="${signUpForm}">
-
                     <div class="p-2">
                         <label for="username">Username: </label>
                         <input class="form-control" type="text" placeholder="5 or more characters" th:name="username" th:value="*{username}" id="username" required autofocus/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</span>
                     </div>
-
                     <div class="p-2">
                         <label for="password">Password: </label>
                         <input class="form-control" type="password" placeholder="8 or more characters"  th:name="password" th:value="*{password}" id="password" required/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</span>
                     </div>
-
                     <div class="p-2">
                         <label for="email">Email: </label>
                         <input class="form-control" type="text" placeholder="5 or more characters"  th:name="email" th:value="*{email}" id="email" required/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span>
                     </div>
-
                     <div class="p-2">
                         <label for="fullname">Name: </label>
                         <input class="form-control" type="text" placeholder="5 or more characters" th:name="fullname" th:value="*{fullname}" id="fullname" required/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('fullname')}" th:errors="*{fullname}">Name Error</span>
                     </div>
-
                     <div class="p-2">
                         <label for="cell">Cell: </label>
                         <input class="form-control" type="text" placeholder="XXX-XXX-XXXX" th:name="cell" th:value="*{cell}" id="cell" required/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('cell')}" th:errors="*{cell}">Cell Error</span>
                     </div>
-
                     <div class="p-2">
                         <label for="userBirthday">Birthday: </label>
                         <input class="form-control" type="text" placeholder="MM/DD/YYYY" th:name="userBirthday" th:value="*{userBirthday}" id="userBirthday" required/>
                         <span class="form-control validationError" th:if="${#fields.hasErrors('userBirthday')}" th:errors="*{userBirthday}">Birthday Error</span>
                     </div>
-
-
-
                     <div class="p-2">
                         <span class=""></span>
                         <input class="form-control form-signin-box" type="submit" value="Sign Up"/>

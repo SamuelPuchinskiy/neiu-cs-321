@@ -1,9 +1,7 @@
 package Astrology.security;
 
-import Astrology.Birthday;
 import Astrology.User;
 import Astrology.data.UserRepository;
-import Astrology.security.EditForm;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -34,7 +32,6 @@ public class EditAccountController {
     public String EditAccount(@PathVariable("id") Long id, Model model) {
 
         User user = userRepo.findById(id).get();
-        //model.addAttribute("user", user);
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
         model.addAttribute("fullname", user.getFullname());
@@ -42,11 +39,6 @@ public class EditAccountController {
         model.addAttribute("userBirthday", user.getUserBirthday());
 
         return "edit-account";
-    }
-
-    @ModelAttribute(name = "editForm")
-    public EditForm addEditFormToModel() {
-        return new EditForm();
     }
 
     @ModelAttribute(name = "SignUpForm")
@@ -60,21 +52,12 @@ public class EditAccountController {
             return  "edit-account";
 
         try {
-
-
             User updateUser = userRepo.findById(id).get();
-
             userRepo.save(SignUpForm.updateUser(updateUser, passwordEncoder, editForm));
-
-
         } catch (DataIntegrityViolationException e) {
             errors.rejectValue("username", "invalidUsername", "Username not available. please choose another username. (Case Sensitive)");
             return "/edit-account";
         }
         return "redirect:/login";
     }
-
-
-
-
 }

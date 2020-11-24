@@ -4,9 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -27,7 +25,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void aquariusInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/aquarius");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -127,7 +124,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void piscesInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/pisces");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -227,7 +223,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void ariesInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/aries");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -327,7 +322,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void taurusInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/taurus");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -427,7 +421,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void geminiInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/gemini");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -528,7 +521,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void cancerInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/cancer");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -629,7 +621,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void leoInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/leo");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -730,7 +721,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void virgoInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/virgo");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -831,7 +821,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void libraInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/libra");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -932,7 +921,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void scorpioInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/scorpio");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -1033,7 +1021,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void sagittariusInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/sagittarius");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -1134,7 +1121,6 @@ public class YearlyHoroscopeDisplayController {
     }
     @ModelAttribute
     public void capricornInfo(Model model) throws IOException  {
-
         URL url = new URL("http://horoscope-api.herokuapp.com/horoscope/year/capricorn");
         HttpURLConnection conn = (HttpURLConnection)url.openConnection();
         conn.setRequestMethod("GET");
@@ -1228,5 +1214,4 @@ public class YearlyHoroscopeDisplayController {
             model.addAttribute("capricornToday", capricornToday);
         }
     }
-
 }

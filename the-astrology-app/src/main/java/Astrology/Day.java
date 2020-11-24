@@ -11,9 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @RequiredArgsConstructor
 public class Day {
-
     @Id
     private final String dayID;
     private final String name;
-
 }

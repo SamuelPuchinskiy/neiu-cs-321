@@ -4,12 +4,10 @@ import Astrology.*;
 import Astrology.data.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-
 import javax.validation.Valid;
 import java.util.List;
 
@@ -23,7 +21,6 @@ public class ModifyController {
     private MonthRepository monthRepo;
     private YearRepository yearRepo;
     private BirthdayProperty birthdayProperty;
-
     private UserRepository userRepo;
 
     @Autowired
@@ -41,7 +38,6 @@ public class ModifyController {
     public String editBirthday(@PathVariable("birthdayId") Long id, Model model) {
 
         Birthday bday = birthdayRepo.findById(id);
-
 
         String userYear = bday.getBirthYearUser();
         String userMonth = bday.getBirthMonthUser();
@@ -72,19 +68,13 @@ public class ModifyController {
         newbday.setMonthZodiac(MonthAlgorithm(newbday.getBirthMonthUser(), newbday.getBirthDayUser()));
         newbday.setNumerology(NumerologyAlgorithm(newbday.getBirthYearUser(), newbday.getBirthMonthUser(), newbday.getBirthDayUser()));
 
-
         Birthday savedBirthday = birthdayRepo.save(newbday);
-
         log.info("Processing..." + newbday);
-
         return "redirect:/Submit/Results";
     }
 
-
     public int getMonthInteger(String month) {
-
         int m = 0;
-
         if(month.equals("January"))
             m = 1;
         else if(month.equals("February"))
@@ -111,19 +101,13 @@ public class ModifyController {
             m = 12;
         else
             m = 0;
-
         return m;
-
     }
 
     public String YearAlgorithm(String year) {
-
         int yr = Integer.parseInt(year);
-
         int yrMod = yr % 12;
-
         String yearStr = "";
-
         switch(yrMod) {
             case 0:
                 yearStr = "Monkey";
@@ -169,14 +153,9 @@ public class ModifyController {
     }
 
     public String MonthAlgorithm(String month, String day) {
-
-        //String monID = monthRepo.findMonthIDByName(month);
         int m = getMonthInteger(month);
-
         int d = Integer.parseInt(day);
-
         String monthStr = "";
-
         if (m == 1) {
             if (d < 20)
                 monthStr = "Capricorn";
@@ -239,35 +218,24 @@ public class ModifyController {
                 monthStr ="Capricorn";
         } else
             monthStr = "Unknown";
-
         return monthStr;
     }
 
     private String NumerologyAlgorithm(String year, String month, String day) {
-
         int yr = Integer.parseInt(year);
-
         int m = getMonthInteger(month);
-
         int d = Integer.parseInt(day);
-
-
         int numValue = 0;
         int tempNumValue = 0;
-
         int tempYear = yr;
         int tempMonth = m;
         int tempDay = d;
-
-
         int count = 4;
-
         while(count > 0) {
             numValue += tempYear % 10;
             tempYear /= 10;
             count--;
         }
-
         if(yr < 9) {
             count = 2;
             while(count > 0) {
@@ -287,9 +255,7 @@ public class ModifyController {
             }
         } else
             numValue += tempDay;
-
         tempNumValue = numValue;
-
         if(tempNumValue > 9) {
             count = 2;
             numValue = 0;
@@ -301,10 +267,7 @@ public class ModifyController {
         }
         else
             numValue = numValue;
-
-
         tempNumValue = numValue;
-
         if(tempNumValue > 9) {
             count = 2;
             numValue = 0;
@@ -316,12 +279,9 @@ public class ModifyController {
         }
         else
             numValue = numValue;
-
         String value = String.valueOf(numValue);
-
         return value;
     }
-
 
     @ModelAttribute(name = "Birth_Month")
     public void addMonthToModel(Model model) {
@@ -343,13 +303,8 @@ public class ModifyController {
 
     @PostMapping("/delete/{birthdayId}")
     public String deleteBirthday(@PathVariable("birthdayId") long id, Model model) {
-
-        //birthdayRepo.deleteById(id);
-
         Birthday date = birthdayRepo.findById(id);
-
         birthdayRepo.delete(date);
-
         return "redirect:/Submit/Results";
     }
 }

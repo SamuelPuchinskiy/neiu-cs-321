@@ -7,22 +7,18 @@
     <title class="pageTitle">Calculator</title>
 </head>
 
-
 <body>
-
     <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
         <div th:replace="fragments/base :: image"> </div>
-
         <div class="normal">
             <div class="d-flex justify-content-center mb-1 mt-3">
                 <h2>Please provide a birthday below to calculate the Zodiac, Birthday, and Numerology</h2>
             </div>
-
             <div class="d-flex justify-content-center mb-1 mt-3">
-                <form method="post" th:object="${birthdayUser}">
 
+                <form method="post" th:object="${birthdayUser}">
                     <div class="p-2">
                         <p>
                             <b>Please choose your birth year: </b>
@@ -38,7 +34,6 @@
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <p>
                             <b>Please choose your birth month: </b>
@@ -54,7 +49,6 @@
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <p>
                             <b>Please choose your birth day: </b>
@@ -70,16 +64,15 @@
                             </select>
                         </p>
                     </div>
-
                     <div class="p-2">
                         <span class=""></span>
                         <input class="form-control form-signin-box" type="submit" value="Submit"/>
                     </div>
 
                 </form>
+
             </div>
         </div>
-
         <div th:replace="fragments/base :: footer"></div>
     </div>
 

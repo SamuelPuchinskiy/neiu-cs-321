@@ -23,7 +23,6 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    //DOES NOT ALWAYS SHOW ERRORS
     @Column(unique = true)
     private String username;
 
@@ -63,7 +62,4 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
-
-
 }

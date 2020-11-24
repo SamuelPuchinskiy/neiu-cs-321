@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <div th:replace="fragments/base :: navigation"></div>
 
     <div class="container mt-5">
@@ -18,7 +17,6 @@
             <div class="d-flex justify-content-center mb-1 mt-3">
                 <h1>Database Admin</h1>
             </div>
-
             <div class="d-flex justify-content-center mb-1 mt-3">
                 <!--TABLE DATA-->
                 <div class="p-2 border" >
@@ -27,26 +25,18 @@
                         <p class="border">Month ID: <span th:text="${bm.monthID}">Month ID</span> ~ Month Name: <span th:text="${bm.name}">Month Name</span> </p>
                     </div>
                 </div>
-
                 <div class="p-2 border">
                     <h2>Day Table</h2>
                     <div th:each="d : ${days}">
                         <p class="border">Day ID: <span th:text="${d.dayID}">Day ID</span> ~ Day Name: <span th:text="${d.name}">Day Name</span> </p>
                     </div>
                 </div>
-
                 <div class="p-2 border">
                     <h2>Year Table</h2>
                     <div th:each="yr : ${year}">
                         <p class="border">Year ID: <span th:text="${yr.yearID}">Year ID</span> ~ Year Name: <span th:text="${yr.name}">Year Name</span> </p>
                     </div>
                 </div>
-
-                    <!--
-                        USER DATA TABLE DOES NOT DROP, USER DATA UPDATES AUTOMATICALLY TO PAGE
-                        All months are 31 days and does not account for Leap year yet
-                    -->
-
                 <div class="p-2 border">
                     <h2>User Data Table</h2>
                     <div th:each="user : ${bday}">

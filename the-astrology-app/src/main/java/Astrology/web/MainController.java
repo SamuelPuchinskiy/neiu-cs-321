@@ -1,7 +1,5 @@
 package Astrology.web;
 
-//import java.awt.print.Pageable;
-//import java.util.Iterator;
 import java.util.List;
 
 import Astrology.*;
@@ -96,14 +94,9 @@ public class MainController {
         }
 
         birthdayUser.setUser(user);
-
         birthdayUser.setYearZodiac(YearAlgorithm(birthdayUser.getBirthYearUser()));
-
         birthdayUser.setMonthZodiac(MonthAlgorithm(birthdayUser.getBirthMonthUser(), birthdayUser.getBirthDayUser()));
-
         birthdayUser.setNumerology(NumerologyAlgorithm(birthdayUser.getBirthYearUser(), birthdayUser.getBirthMonthUser(), birthdayUser.getBirthDayUser()));
-
-
 
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
@@ -112,9 +105,7 @@ public class MainController {
     }
 
     public int getMonthInteger(String month) {
-
         int m = 0;
-
         if(month.equals("January"))
             m = 1;
         else if(month.equals("February"))
@@ -141,19 +132,13 @@ public class MainController {
             m = 12;
         else
             m = 0;
-
         return m;
-
     }
 
     public String YearAlgorithm(String year) {
-
         int yr = Integer.parseInt(year);
-
         int yrMod = yr % 12;
-
         String yearStr = "";
-
         switch(yrMod) {
             case 0:
                 yearStr = "Monkey";
@@ -199,14 +184,9 @@ public class MainController {
     }
 
     public String MonthAlgorithm(String month, String day) {
-
-        //String monID = monthRepo.findMonthIDByName(month);
         int m = getMonthInteger(month);
-
         int d = Integer.parseInt(day);
-
         String monthStr = "";
-
         if (m == 1) {
             if (d < 20)
                 monthStr = "Capricorn";
@@ -269,35 +249,24 @@ public class MainController {
                 monthStr ="Capricorn";
         } else
             monthStr = "Unknown";
-
         return monthStr;
     }
 
     private String NumerologyAlgorithm(String year, String month, String day) {
-
         int yr = Integer.parseInt(year);
-
         int m = getMonthInteger(month);
-
         int d = Integer.parseInt(day);
-
-
         int numValue = 0;
         int tempNumValue = 0;
-
         int tempYear = yr;
         int tempMonth = m;
         int tempDay = d;
-
-
         int count = 4;
-
         while(count > 0) {
             numValue += tempYear % 10;
             tempYear /= 10;
             count--;
         }
-
         if(yr < 9) {
             count = 2;
             while(count > 0) {
@@ -317,9 +286,7 @@ public class MainController {
             }
         } else
             numValue += tempDay;
-
         tempNumValue = numValue;
-
         if(tempNumValue > 9) {
             count = 2;
             numValue = 0;
@@ -331,10 +298,7 @@ public class MainController {
         }
         else
             numValue = numValue;
-
-
         tempNumValue = numValue;
-
         if(tempNumValue > 9) {
             count = 2;
             numValue = 0;
@@ -346,9 +310,7 @@ public class MainController {
         }
         else
             numValue = numValue;
-
         String value = String.valueOf(numValue);
-
         return value;
     }
 }

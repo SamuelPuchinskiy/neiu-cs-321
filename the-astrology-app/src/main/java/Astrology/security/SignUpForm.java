@@ -3,7 +3,6 @@ package Astrology.security;
 import Astrology.User;
 import lombok.Data;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -36,11 +35,9 @@ public class SignUpForm {
     @Pattern(regexp = "[0-9]{2}/[0-9]{2}/[0-9]{4}", message = "Birthday format: MM/DD/YYYY (Case Sensitive)")
     private String userBirthday;
 
-
     public User toUser(PasswordEncoder passwordEncoder) {
         return new User(username, passwordEncoder.encode(password), email, fullname, cell, userBirthday);
     }
-
 
     public static User updateUser(User updateUser, PasswordEncoder passwordEncoder, SignUpForm editForm) {
 
@@ -50,7 +47,6 @@ public class SignUpForm {
         updateUser.setFullname(editForm.getFullname());
         updateUser.setCell(editForm.getCell());
         updateUser.setUserBirthday(editForm.getUserBirthday());
-
 
         return updateUser;
     }

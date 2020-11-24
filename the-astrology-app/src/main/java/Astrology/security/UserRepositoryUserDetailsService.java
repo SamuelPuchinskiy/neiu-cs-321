@@ -25,7 +25,6 @@ public class UserRepositoryUserDetailsService implements UserDetailsService {
         if(user != null)
             return user;
 
-        //else
         throw new UsernameNotFoundException("User " + username + " not found");
     }
 }
