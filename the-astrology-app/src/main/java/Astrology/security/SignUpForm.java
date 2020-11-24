@@ -14,8 +14,8 @@ public class SignUpForm {
 
     @NotNull
     @Size(min = 5, max = 50, message = "Username must have at least 5 to 50 characters (Case Sensitive)")
-    private String username;
 
+    private String username;
     @NotNull
     @Size(min = 8, max = 25, message = "Password must have at least 8 to 25 characters (Case Sensitive)")
     private String password;
@@ -36,9 +36,22 @@ public class SignUpForm {
     @Pattern(regexp = "[0-9]{2}/[0-9]{2}/[0-9]{4}", message = "Birthday format: MM/DD/YYYY (Case Sensitive)")
     private String userBirthday;
 
+
     public User toUser(PasswordEncoder passwordEncoder) {
         return new User(username, passwordEncoder.encode(password), email, fullname, cell, userBirthday);
     }
 
 
+    public static User updateUser(User updateUser, PasswordEncoder passwordEncoder, SignUpForm editForm) {
+
+        updateUser.setUsername(editForm.getUsername());
+        updateUser.setPassword(passwordEncoder.encode(editForm.getPassword()));
+        updateUser.setEmail(editForm.getEmail());
+        updateUser.setFullname(editForm.getFullname());
+        updateUser.setCell(editForm.getCell());
+        updateUser.setUserBirthday(editForm.getUserBirthday());
+
+
+        return updateUser;
+    }
 }

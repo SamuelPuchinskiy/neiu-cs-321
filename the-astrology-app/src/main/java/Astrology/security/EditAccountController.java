@@ -34,9 +34,12 @@ public class EditAccountController {
     public String EditAccount(@PathVariable("id") Long id, Model model) {
 
         User user = userRepo.findById(id).get();
-
-        model.addAttribute("user", user);
-
+        //model.addAttribute("user", user);
+        model.addAttribute("username", user.getUsername());
+        model.addAttribute("email", user.getEmail());
+        model.addAttribute("fullname", user.getFullname());
+        model.addAttribute("cell", user.getCell());
+        model.addAttribute("userBirthday", user.getUserBirthday());
 
         return "edit-account";
     }
@@ -46,55 +49,32 @@ public class EditAccountController {
         return new EditForm();
     }
 
-    @PostMapping("/update")
-    public String processUpdateUser(@Valid @ModelAttribute("editForm") EditForm editForm, Errors errors) {
-        if(errors.hasErrors())
-            return  "/edit-account";
-
-        try {
-
-            //SignUpForm newSign = userRepo.findById(id);
-
-            //User newUser = userRepo.findById(id).get();
-
-            //SignUpForm newSignUpForm = userRepo.findById(id).get();
-
-            //newUser.set(signUpForm.getUsername());
-
-
-
-            //userRepo.save(signUpForm.toUser(passwordEncoder));
-        } catch (DataIntegrityViolationException e) {
-            errors.rejectValue("username", "invalidUsername", "Username not available. please choose another username. (Case Sensitive)");
-            return "/edit-account";
-        }
-
-
-
-        return "redirect:/AstrologyMain/loginpage";
+    @ModelAttribute(name = "SignUpForm")
+    public SignUpForm addSignUpFormToModel() {
+        return new SignUpForm();
     }
 
-    /*
-   // @GetMapping("/userId")
-    //public
-
-    @PostMapping("/{id}")
-    public String processSignUp(@PathVariable("id") Long id, @Valid @ModelAttribute("signUpForm") SignUpForm signUpForm, Errors errors) {
+    @PostMapping("/update/{id}")
+    public String processUpdateUser(@PathVariable("id") Long id, @Valid @ModelAttribute("SignUpForm") SignUpForm editForm, Errors errors) {
         if(errors.hasErrors())
-            return  "/edit-account";
-
-        //User newUser = userRepo.findById(userId);
-
+            return  "edit-account";
 
         try {
-            userRepo.save(signUpForm.toUser(passwordEncoder));
+
+
+            User updateUser = userRepo.findById(id).get();
+
+            userRepo.save(SignUpForm.updateUser(updateUser, passwordEncoder, editForm));
+
+
         } catch (DataIntegrityViolationException e) {
             errors.rejectValue("username", "invalidUsername", "Username not available. please choose another username. (Case Sensitive)");
             return "/edit-account";
         }
         return "redirect:/login";
     }
-*/
+
+
 
 
 }
