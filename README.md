@@ -8,8 +8,8 @@
   <h3>neiu-cs-321</h3>
   <h3>Server Side Web Development</h3> 
 
-  <div id="homework1">
-    <h4>Homework 1</h4>
+  <div id="README">
+    <h4>READ ME</h4>
     <ol>
       <!--Application Name: Pick a name for your server-side application!-->
       <li>The application name is called <i>The Astrology App</i>.</li>
