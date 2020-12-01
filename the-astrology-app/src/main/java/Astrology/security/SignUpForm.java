@@ -40,7 +40,6 @@ public class SignUpForm {
     }
 
     public static User updateUser(User updateUser, PasswordEncoder passwordEncoder, SignUpForm editForm) {
-
         updateUser.setUsername(editForm.getUsername());
         updateUser.setPassword(passwordEncoder.encode(editForm.getPassword()));
         updateUser.setEmail(editForm.getEmail());
