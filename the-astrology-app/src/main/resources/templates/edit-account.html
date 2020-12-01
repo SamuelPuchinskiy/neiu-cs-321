@@ -21,13 +21,13 @@
             </div>
             <div class="d-flex flex-row justify-content-center">
                 <div class="p-4">
-                    <h5>Please be advised that to see changes you must logout and log back in with the updated username and password.</h5>
+                    <h5>Please enter the updated information or click Cancel to go back</h5>
                 </div>
             </div>
 
             <div class="d-flex flex-row justify-content-center">
-
                 <form method="post" th:action="@{/edit-account/update/{userId}(userId=${id})}" th:object="${SignUpForm}">
+
                     <div class="p-2">
                         <label for="username">Username: </label>
                         <input class="form-control" type="text" placeholder="5 or more characters" th:name="username" th:value="${username}" id="username" required autofocus/>
@@ -63,6 +63,7 @@
                         <button type="button" class="form-control form-signin-box" ><a th:href="@{/AstrologyMain/loginpage}">Cancel</a></button> <br/>
                         <input class="form-control form-signin-box" type="submit" value="Update"/>
                     </div>
+
                 </form>
 
             </div>

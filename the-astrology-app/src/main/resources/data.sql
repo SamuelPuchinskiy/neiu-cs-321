@@ -1,9 +1,7 @@
 
 delete from Birth_Month;
-
 insert into Birth_Month(monthID, name)
 values('1', 'January');
-
 insert into Birth_Month(monthID, name)
 values('2', 'February');
 insert into Birth_Month(monthID, name)
@@ -26,8 +24,6 @@ insert into Birth_Month(monthID, name)
 values('11', 'November');
 insert into Birth_Month(monthID, name)
 values('12', 'December');
-
-
 
 delete from Day;
 insert into Day(dayID, name)

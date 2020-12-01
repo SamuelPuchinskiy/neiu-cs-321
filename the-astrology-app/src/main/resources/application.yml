@@ -1,5 +1,3 @@
-
-
 #spring.jpa.hibernate.ddl-auto=update
 #spring.h2.console.enabled=true
 #spring.datasource.url=jdbc:h2:file:C:/Users/mycat/Desktop/Server Side/neiu-cs-321/the-astrology-app/dbdata
