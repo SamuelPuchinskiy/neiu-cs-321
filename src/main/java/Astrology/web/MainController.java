@@ -101,7 +101,12 @@ public class MainController {
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
         log.info("Processing..." + birthdayUser);
-        return "redirect:/Submit/Results";
+        return "redirect:/AstrologyMain/Results";
+    }
+
+    @GetMapping("/Results")
+    public String resultsPage() {
+        return "submitresults";
     }
 
     public int getMonthInteger(String month) {
