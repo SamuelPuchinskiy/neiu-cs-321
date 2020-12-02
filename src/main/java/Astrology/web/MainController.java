@@ -101,7 +101,7 @@ public class MainController {
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
         log.info("Processing..." + birthdayUser);
-        return "redirect:/Submit/Results";
+        return "redirect:/AstrologyMain/loginpage";
     }
 
     public int getMonthInteger(String month) {
