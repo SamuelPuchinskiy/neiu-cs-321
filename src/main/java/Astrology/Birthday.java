@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
+@Table(name = "Birthday_Data")
 public class Birthday implements Serializable {
     private static final long serialVersionUID = 1L;
 
