@@ -12,7 +12,7 @@ spring:
       ddl-auto: create
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MYSQL5Dialect
+        dialect: org.hibernate.dialect.MySQL5Dialect
 
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
