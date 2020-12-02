@@ -101,12 +101,7 @@ public class MainController {
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
         log.info("Processing..." + birthdayUser);
-        return "submitresults";
-    }
-
-    @GetMapping("/Results")
-    public String resultsPage() {
-        return "submitresults";
+        return "redirect:/Submit/Results";
     }
 
     public int getMonthInteger(String month) {
