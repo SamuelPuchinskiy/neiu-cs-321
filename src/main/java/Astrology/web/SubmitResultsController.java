@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/Submit")
 public class SubmitResultsController {
 
-    /*
     @GetMapping("/Results")
     public String resultsPage() {
         return "submitresults";
     }
-     */
+
 
     @PostMapping
     public String displayTable() {
