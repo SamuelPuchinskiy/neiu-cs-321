@@ -101,7 +101,7 @@ public class MainController {
         Birthday savedBirthday = birthdayRepo.save(birthdayUser);
 
         log.info("Processing..." + birthdayUser);
-        return "redirect:/AstrologyMain/Results";
+        return "submitresults";
     }
 
     @GetMapping("/Results")
