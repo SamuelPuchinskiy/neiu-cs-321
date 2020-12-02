@@ -11,7 +11,7 @@ public class SubmitResultsController {
 
     @GetMapping("/Results")
     public String resultsPage() {
-        return "submitresults";
+        return "submit-results";
     }
 
 
