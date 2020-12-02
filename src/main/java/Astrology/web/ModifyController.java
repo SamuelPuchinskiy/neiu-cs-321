@@ -70,7 +70,7 @@ public class ModifyController {
 
         Birthday savedBirthday = birthdayRepo.save(newbday);
         log.info("Processing..." + newbday);
-        return "redirect:/Submit/Results";
+        return "redirect:/AstrologyMain/loginpage";
     }
 
     public int getMonthInteger(String month) {
@@ -305,6 +305,6 @@ public class ModifyController {
     public String deleteBirthday(@PathVariable("birthdayId") long id, Model model) {
         Birthday date = birthdayRepo.findById(id);
         birthdayRepo.delete(date);
-        return "redirect:/Submit/Results";
+        return "redirect:/AstrologyMain/loginpage";
     }
 }
